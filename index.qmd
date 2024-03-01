@@ -1,0 +1,37 @@
+# EsCHER's R-evolution: Mastering R Package Development for Health Economics
+
+![](images/course.png)
+
+## 👋 Welcome to EsCHER's R-evolution
+
+Welcome to the workshop "Mastering R Package Development for Health Economics" with [Prof. dr. Gianluca Baio](https://www.linkedin.com/in/gianluca-baio-b893879/?originalSubdomain=uk).
+
+In this 1-day workshop, we will learn more about how to develop an R package for health economics and to what extend developing your own package can be be useful for your research.
+
+## 📚 Course Material
+
+To get most out of this workshop, we recommend you to read up on couple of things before you attend:
+
+- If you are not familiar with the basic syntax of R, we recommend you to read the [Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html) from the R documentation.
+- If you want to read-up on anything related to Data Science and R, we recommend you to read [R for Data Science (2e)](https://r4ds.hadley.nz) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
+- If you are not familiar with *functions* in R, we recommend you to read [Chapter 6 Functions](https://adv-r.hadley.nz/functions.html) from the book *Advanced R* by Hadley Wickham.
+
+## 📝 Pre-Workshop Checklist
+
+### Must-haves
+Before you attend the workshop, please make sure you have the following things ready:
+
+- **R and RStudio**: Make sure you have R and RStudio installed on your computer. You can download R from [here](https://cran.r-project.org) and RStudio from [here](https://www.rstudio.com/products/rstudio/download/).
+
+### Nice to haves
+The following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.
+
+- **R Packages**: Make sure you have the following R packages installed: `devtools`, `roxygen2`, `testthat`, `usethis`
+
+- **Git**: Make sure you have Git installed on your computer. You can download Git from [here](https://git-scm.com/downloads) or the EUR software center.
+
+- **GitHub Account**: Make sure you have a GitHub account. If you don't have one, you can create one [here](github.com). In any case, we strongly recommend to upgrade to a free [teachers account](https://education.github.com/teachers) to get free private repositories and other benefits such as GitHub Copilot. It takes some hurdles to get the teacher account, so we recommend you to start the process as soon as possible. It is worth it!
+
+- Install **GitHub Desktop**: GitHub Desktop is a graphical user interface for GitHub. You can download GitHub Desktop from [here](https://desktop.github.com).
+
+

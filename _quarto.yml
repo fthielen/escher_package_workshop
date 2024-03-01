@@ -1,0 +1,39 @@
+project:
+  type: website
+
+website:
+  title: "EsCHER's R-evolution: Mastering R Package Development for Health Economics"
+  sidebar:
+    background: primary
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/fthielen/escher_package_workshop
+        text: GitHub
+    style: docked
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: timetable.qmd
+        text: Timetable
+      - section: "Day 1"
+        contents:
+          - href: day1/day1_pre.qmd
+            text: Pre-class
+          - section: "In-class"
+            contents:
+              - href: day1/day1_in.qmd
+                text: Programme
+              - href: day1/1_acquire.qmd
+                text: "Tutorial: Acquire"
+              - href: day1/day1_extra.qmd
+                text: "Slides & extra material"
+format:
+  html:
+    theme: 
+      dark: darkly
+      light: flatly
+   # css: styles.css
+    toc: true

@@ -1,0 +1,6 @@
+# Timetable
+
+| Time          | Title      | Description                |
+|-----------------|----------------------------|----------------------------|
+| 09:30 - 10:00 | **☕️ Arrival & Cofee**      | Open space on the 7^th^ floor                    |
+| 09:30 - 10:00 | **👋 Welcome & Introduction**      |                     |
