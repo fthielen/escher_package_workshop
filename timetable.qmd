@@ -1,6 +1,10 @@
 # Timetable
 
-| Time          | Title      | Description                |
+| Time          | Title      | Location                |
 |-----------------|----------------------------|----------------------------|
-| 09:30 - 10:00 | **☕️ Arrival & Cofee**      | Open space on the 7^th^ floor                    |
-| 09:30 - 10:00 | **👋 Welcome & Introduction**      |                     |
+| 09:30 - 10:00 | **☕️ Arrival & Cofee**  | Open space on the 7^th^ floor           |
+| 10:00 - 10:30 | **👋 Welcome & Introduction**      |  J7-55           |
+| 10:30 - 11:45 | **🎤 Keynote by [Prof. dr. Gianluca Baio](https://www.linkedin.com/in/gianluca-baio-b893879/?originalSubdomain=uk)** |  J7-55           |
+| 11:45 - 12:30 | **🥗 Lunch** |  Open space on the 7^th^ floor           |
+| 12:30 - 14:45 | **💻 Coding exercise: build your own package** |  J7-43, J7-45, J7-47       |
+| 14:45 - 15:30 | **🧊 Drinks** |  Open space on the 7^th^ floor           |

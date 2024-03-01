@@ -18,9 +18,9 @@ website:
         text: Home
       - href: timetable.qmd
         text: Timetable
-      - section: "Day 1"
+      - section: "Coding exercises"
         contents:
-          - href: day1/day1_pre.qmd
+          - href: coding/exercises.qmd
             text: Pre-class
           - section: "In-class"
             contents:
