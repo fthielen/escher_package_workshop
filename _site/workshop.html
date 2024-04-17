@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>EsCHER’s R-evolution: Mastering R Package Development for Health Economics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Coding exercises</a></li><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/fthielen/escher_package_workshop" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./timetable.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Timetable</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preclass.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pre-class</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Coding exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workshop.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Workshop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">In-class</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day1/day1_in.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day1/1_acquire.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial: Acquire</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day1/day1_extra.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides &amp; extra material</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#r-package-workshop" id="toc-r-package-workshop" class="nav-link active" data-scroll-target="#r-package-workshop">R package workshop</a>
+  <ul class="collapse">
+  <li><a href="#lets-get-started" id="toc-lets-get-started" class="nav-link" data-scroll-target="#lets-get-started">Let’s get started!</a></li>
+  <li><a href="#making-a-new-r-project" id="toc-making-a-new-r-project" class="nav-link" data-scroll-target="#making-a-new-r-project">Making a new R project</a></li>
+  <li><a href="#install-required-packages" id="toc-install-required-packages" class="nav-link" data-scroll-target="#install-required-packages">Install required packages</a></li>
+  <li><a href="#why-are-we-making-an-r-package-what-is-it" id="toc-why-are-we-making-an-r-package-what-is-it" class="nav-link" data-scroll-target="#why-are-we-making-an-r-package-what-is-it">Why are we making an R package? What is it?</a></li>
+  <li><a href="#the-most-basic-r-package" id="toc-the-most-basic-r-package" class="nav-link" data-scroll-target="#the-most-basic-r-package">The most basic R package</a>
+  <ul class="collapse">
+  <li><a href="#coding-conventions" id="toc-coding-conventions" class="nav-link" data-scroll-target="#coding-conventions">Coding conventions</a></li>
+  </ul></li>
+  <li><a href="#continue-building-the-package" id="toc-continue-building-the-package" class="nav-link" data-scroll-target="#continue-building-the-package">Continue building the package</a></li>
+  <li><a href="#adding-documentation" id="toc-adding-documentation" class="nav-link" data-scroll-target="#adding-documentation">Adding documentation</a></li>
+  <li><a href="#uploading-to-and-install-from-github." id="toc-uploading-to-and-install-from-github." class="nav-link" data-scroll-target="#uploading-to-and-install-from-github.">Uploading to and install from GitHub.</a></li>
+  <li><a href="#develop-your-own-package" id="toc-develop-your-own-package" class="nav-link" data-scroll-target="#develop-your-own-package">Develop your own package</a></li>
+  <li><a href="#peer-review" id="toc-peer-review" class="nav-link" data-scroll-target="#peer-review">Peer review</a>
+  <ul class="collapse">
+  <li><a href="#share-your-work-for-peer-review" id="toc-share-your-work-for-peer-review" class="nav-link" data-scroll-target="#share-your-work-for-peer-review">Share your work for peer review</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="r-package-workshop" class="level1">
+<h1>R package workshop</h1>
+<p>Welcome! In this session we will get our hands dirty with some coding in R. The aim of this session is to empower you with skills to that make you able to build a (basic) R package. In order to achieve that, this tutorial is a step-by-step guide. The material is inspired by the tutorial published by Brad Duthie (see <a href="https://ourcodingclub.github.io/tutorials/writing-r-package/#github">here</a>) which is part of the Coding Club. We like to thank Brad and the Coding Club for providing his work open source for reuse.</p>
+<section id="lets-get-started" class="level2">
+<h2 class="anchored" data-anchor-id="lets-get-started">Let’s get started!</h2>
+<blockquote class="blockquote">
+<p>Do you want to go fast?</p>
+<p>Go alone!</p>
+<p>Do you want to go far?</p>
+<p>Work together!</p>
+</blockquote>
+<p>The saying is true, and especially with coding. However, the aim of developing a package is that your code is used by others. Therefore, we really recommend you to work together. In the end your code is more often read than written and you better make sure that your logic is also understood by others. So please, if you have not found a partner in crime at this stage, search for a buddy. Let’s us know if you need help.</p>
+</section>
+<section id="making-a-new-r-project" class="level2">
+<h2 class="anchored" data-anchor-id="making-a-new-r-project">Making a new R project</h2>
+<p>To get started with an R packages including documentation, it is best to create a new R project. To do this first open Rstudio. In Rstudio, go to <code>File &gt; New Project...</code>; the box below should show up.</p>
+<p><img src="images/new_project.png" class="img-fluid"></p>
+<p>Select the option <code>New Directory</code>. The following box should appear.</p>
+<p><img src="images/new_project_pop_up.png" class="img-fluid"></p>
+<p>Select the option <code>New Project</code> <img src="images/new_project_select_new_repo.png" class="img-fluid"></p>
+<p>Now give your directory a name and Browse on your computer for a good place for this R package to live. And click on <code>Create Project</code>.</p>
+<p><img src="images/new_project_name_repo.png" class="img-fluid"></p>
+<p>You will now find this folder and R project on the location you set the directory. Quite likely, the project did even open in R studio. You will notice this by having the Directory Name in your right top corner of R studio.</p>
+<p><img src="images/R_project_opened.png" class="img-fluid"></p>
+<p>Within the folder, the R project is shown as a file ending with <code>.Rproj</code> .</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Extra information">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Extra information
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There is also a hidden file, likely called <code>.Rproj.user</code>. You will not see it unless you ask your computer to show it. On a Mac you can see this by going to the folder and click “<strong>Command + shift + . (period key)</strong>”. The* <em>folder</em> <code>.Rproj.user</code> <em>is not really important; it stores some more meta-data about the package development.</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="install-required-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-required-packages">Install required packages</h2>
+<p>Before we begin, we need to install the <code>devtools</code> and <code>roxygen2</code> packages. <code>Devtools</code> includes a comprehensive set of tools essential for package development, and <code>roxygen2</code> facilitates the creation of documentation.</p>
+<div class="cell" data-execute="false">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"roxygen2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You might need to restart Rstudio after installing the above packages.</p>
+</section>
+<section id="why-are-we-making-an-r-package-what-is-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-are-we-making-an-r-package-what-is-it">Why are we making an R package? What is it?</h2>
+<p>Packages in R are collections of code and data created by members of the R community. They have a variety of purposes, ranging from comprehensive and widely used statistical libraries to simpler packages containing functions for knock-knock jokes (really, <a href="https://github.com/psolymos/KnockKnockJokes">no joke</a>).</p>
+<p>If you have been using R for any amount of time, you likely have had to install and utilize functions from an R package. In these notes, we will guide you through the fundamentals of creating your own R package. This process will not only be useful if you plan to develop your own code into a package but will also enhance your understanding of the R packages you employ in your research and how they are constructed.</p>
+<p>Many R users are familiar with the (Comprehensive R Archive Network <a href="https://cran.r-project.org">CRAN</a>), which is a vast repository hosting over 13,000 published R packages. These packages are made available to the R community and can be installed in RStudio using the <code>install.packages</code> function. However, not every R package needs to be or should be uploaded to CRAN. Packages can also be uploaded to and downloaded from GitHub, or even constructed for personal use—many researchers maintain personal R packages with documented functions they regularly utilize in their research.</p>
+<p>In this tutorial, we will take you through the steps to write a simple R package, explain how you can upload it to GitHub, and download it from GitHub. We will focus exclusively on package development in RStudio for simplicity and efficiency, although it is also possible to develop packages using the command line.</p>
+</section>
+<section id="the-most-basic-r-package" class="level2">
+<h2 class="anchored" data-anchor-id="the-most-basic-r-package">The most basic R package</h2>
+<p>This would be a scenario where you would like to include two functions. The first function is to convert temperatures from degrees Fahrenheit to degrees Celsius, while the second function will convert temperatures from degrees Celsius to degrees Fahrenheit.</p>
+<p>The first thing we need to do is to create an new folder inside of our R package repository called <code>R</code>.</p>
+<p>In R studio, you can click on the button <code>New Folder</code>.</p>
+<p><img src="images/new_folder.png" class="img-fluid"></p>
+<p>The following box shows up. <img src="images/new_folder_box.png" class="img-fluid"></p>
+<p>Now name the folder <code>R</code> and click oke.</p>
+<p><img src="images/new_folder_give_name.png" class="img-fluid"></p>
+<p>In R studio you now see the folder.</p>
+<p><img src="images/R_folder_created.png" class="img-fluid"></p>
+<p>Next, we have to add an R script. You can click <code>File &gt; New File &gt; R script</code>.</p>
+<p><img src="images/open_r_script.png" class="img-fluid"></p>
+<p>A file called <code>Untitled1</code> opens. Click on the save button and give the R script a name.</p>
+<p><img src="images/save_r_script.png" class="img-fluid"></p>
+<p>Give your R script a name, select the <code>R</code> folder as the location for the file and click <code>Save</code>. This <code>R</code> folder is the folder where you will store actual R scripts with the coded functions.</p>
+<p><em>[<span class="citation" data-cites="Gianluca">@Gianluca</span> or do you recommend different?</em></p>
+<p><img src="images/name_r_script.png" class="img-fluid"></p>
+<p>In your R repository environment you should now see the file within the R folder.</p>
+<p><img src="images/script_in_R_folder.png" class="img-fluid"></p>
+<p>Within this folder you can save as many R scripts, <code>.R</code> files, as you like. And each of these <code>.R</code>. files can have as any functions you want. You could, for example, give each function its own file, but for large projects, you might like to group similar functions in the same R file.</p>
+<p>In our R package, we will write both functions in the same file called ‘convert_temperature_function.R’. Paste the code from below in the file and click <code>save</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>convert_Fahrenheid_to_Celsius <span class="ot">&lt;-</span> <span class="cf">function</span>(F_temp){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    C_temp <span class="ot">&lt;-</span> (F_temp <span class="sc">-</span> <span class="dv">32</span>) <span class="sc">*</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">9</span>;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(C_temp);</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>convert_Celsius_to_Fahrenheid <span class="ot">&lt;-</span> <span class="cf">function</span>(C_temp){</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    F_temp <span class="ot">&lt;-</span> (C_temp <span class="sc">*</span> <span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span>;</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(F_temp);</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="coding-conventions" class="level3">
+<h3 class="anchored" data-anchor-id="coding-conventions">Coding conventions</h3>
+<p>Coding conventions in R are essential for maintaining readable, efficient, and consistent code across projects. One well-known standard is the <a href="https://google.github.io/styleguide/Rguide.html">Google’s R Style Guide</a>, which emphasizes clarity and simplicity with rules on naming conventions, syntax, and data structure usage. Similarly, the <a href="https://style.tidyverse.org">Tidyverse style guide</a>, used primarily for packages within the Tidyverse collection, focuses on making R code easy to write, read, and maintain, highlighting functional programming and data manipulation tasks. Another example is the Decision Analysis in R for Technologies in Health, <a href="https://link.springer.com/epdf/10.1007/s40273-019-00837-x?author_access_token=KOIbJdBMHsQNE2a8zJce-ve4RwlQNchNByi7wbcMAY6e0-5H6BNOZKasC2sXxufZaSBzdbVbaNnyysJI3B2zpbN3r5PNER0iGT2-1i1OhscNMCrYgEw4GDbfoyuq9mCbprrC-sbTOpIjGBVM-noGmw==">DARTH framework</a>, which provides guidelines for naming conventions of health economic models.</p>
+<p>Overall, all these guides aim to facilitate the sharing and readability of code. This is key when building a package which will be used by others. Therefore, we like to stress to use good coding practices along the way.</p>
+</section>
+</section>
+<section id="continue-building-the-package" class="level2">
+<h2 class="anchored" data-anchor-id="continue-building-the-package">Continue building the package</h2>
+<p>Next, we need to create a new file named DESCRIPTION in the <code>escher_package_workshop</code> directory. It is important to place this file directly in the main directory, not within the <code>R</code> subfolder. This file will be a plain text document without any file extension and will contain metadata about the R package. Initially, this file will include just four lines of code that specify the package name, type, title, and version number.</p>
+<p>First go back to the main folder (in other words, leave the R folder.</p>
+<p>Click on <code>Black File &gt; Text File &gt; name the file DESCRIPTION</code> and click <code>OK</code></p>
+<p><img src="images/create_description.png" class="img-fluid"></p>
+<p><img src="images/create_description_box.png" class="img-fluid"></p>
+<p>Copy the following text to the DESCRIPTION.txt file and click <code>save</code></p>
+<pre><code>Package: My R package EsCHER
+Type: Package
+Title: Temperature Conversion Package for Demonstration
+Version: 0.0.1.0
+RoxygenNote: 7.3.1
+Encoding: UTF-8</code></pre>
+<p>At this state, we could call the current code a package. We could load it using the code below after first making sure we activated <code>devtools</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load_all</span>(<span class="st">"."</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Working directory should be in the package escher package workshop,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># if you followed the settings with the project this should run.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After you ran this code, the fucntions we coded before are now read into R and we can use them to convert temperatures. Please try it out running to following code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">convert_Fahrenheid_to_Celsius</span>(<span class="at">F_temp =</span> <span class="dv">79</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">convert_Celsius_to_Fahrenheid</span>(<span class="at">C_temp =</span> <span class="dv">29</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Although we made a basic packages, this is not a good point to stop for writing a package, because we really should included some sort of documentation in which we explain where this package is design fro and how users should use the functions. In other words, we need to provide guidance on how to use the it.</p>
+</section>
+<section id="adding-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="adding-documentation">Adding documentation</h2>
+<p>If we want others to use the functions that we have written, we need to provide some documentation for them. Documentation shows up in the ‘Help’ tab of RStudio when running the function <code>help</code>. You can run the following code to see what I mean.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The code above, is the same as running.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>?lm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In the help tab from RStudio you know see the R Documentation about Fitting Linear Models a function that is part of the <code>stats</code> package.</p>
+<p><img src="images/help_file_lm.png" class="img-fluid"></p>
+<p>These helpful markdown files can be made in Rstudio using the <code>roxygen2</code> package. To do this, you need to add to add extra notation to the functions written in the convert_temperature_function.R file. The code below shows a simple example.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Fahrenheit conversion</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' Convert degrees Fahrenheit temperatures to degrees Celsius</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param F_temp The temperature in degrees Fahrenheit</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return The temperature in degrees Celsius</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @examples </span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' temp1 &lt;- F_to_C(50);</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#' temp2 &lt;- F_to_C( c(50, 63, 23) );</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>convert_Fahrenheid_to_Celsius <span class="ot">&lt;-</span> <span class="cf">function</span>(F_temp){</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    C_temp <span class="ot">&lt;-</span> (F_temp <span class="sc">-</span> <span class="dv">32</span>) <span class="sc">*</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">9</span>;</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(C_temp);</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#' Celsius conversion</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#' Convert degrees Celsius temperatures to degrees Fahrenheit</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' @param C_temp The temperature in degrees Celsius</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#' @return The temperature in degrees Fahrenheit</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#' @examples </span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#' temp1 &lt;- C_to_F(22);</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#' temp2 &lt;- C_to_F( c(-2, 12, 23) );</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#' @export</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>convert_Celsius_to_Fahrenheid <span class="ot">&lt;-</span> <span class="cf">function</span>(C_temp){</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    F_temp <span class="ot">&lt;-</span> (C_temp <span class="sc">*</span> <span class="dv">9</span><span class="sc">/</span><span class="dv">5</span>) <span class="sc">+</span> <span class="dv">32</span>;</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(F_temp);</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>It is important to note that the length of the code has significantly increased due to the addition of documentation. However, this provides useful reminders on how to use each function. For example, the first line, such as <code>#' Fahrenheit conversion</code>, indicates the function’s title, while the following line provides a description. Additional tags like <code>@param</code> and <code>@examples</code> are utilized to structure different sections of the help file. These are just a few of the available tags; for a more comprehensive understanding of the Roxygen format, you can visit <a href="http://kbroman.org/pkg_primer/pages/docs.html">Karl Broman’s page</a> or Hadley Wickham’s “Get started with <code>roxygen</code>” via this <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">link</a>.</p>
+<p>By using this format, the <code>roxygen2</code> package simplifies the creation of help files in markdown. To proceed, ensure that the project is open and the working directory is correctly set (using <code>getwd()</code> should return the directory of your R package).</p>
+<p>Then, run the following command in the console.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(roxygen2) <span class="co"># Read in the roxygen2 R package</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">roxygenise</span>()      <span class="co"># Builds the help files</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>roxygenise</code> is the workhorse function that uses roclets, the built-in document transformation functions, to build all documentation for a package. For more information, you can read the documentation in the <code>roxygen2</code> package.</p>
+<p>Here is how our package directory looks like now.</p>
+<p><img src="images/directory_after_roxygen.png" class="img-fluid"></p>
+<p>Note that two things have been added to the directory. The first is a new folder called <code>man</code>, which holds the help files that we have written. The second is a plain text file <code>NAMESPACE</code>, which works with R to integrate them into the package correctly; you do not need to edit <code>NAMESPACE</code> manually, in fact, the file itself tells you not to edit it. This is what the file contains.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generated by roxygen2: do not edit by hand</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">export</span>(convert_Celsius_to_Fahrenheid)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">export</span>(convert_Fahrenheid_to_Celsius)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Inside the <code>man</code> folder, there are two new markdown documents, one for each function. <img src="images/man_folder.png" class="img-fluid"></p>
+<p>Both are plain text files. Here are the contents of convert_Celsius_to_Fahrenheid.Rd.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>% Generated by roxygen2<span class="sc">:</span> do not edit by hand</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>% Please edit documentation <span class="cf">in</span> R<span class="sc">/</span>convert_temperature_function.R</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>\name{convert_Celsius_to_Fahrenheid}</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>\alias{convert_Celsius_to_Fahrenheid}</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>\title{Celsius conversion}</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>\usage{</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="fu">convert_Celsius_to_Fahrenheid</span>(C_temp)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>\arguments{</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>\item{C_temp}{The temperature <span class="cf">in</span> degrees Celsius}</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>\value{</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>The temperature <span class="cf">in</span> degrees Fahrenheit</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>\description{</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>Convert degrees Celsius temperatures to degrees Fahrenheit</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>\examples{</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>temp1 <span class="ot">&lt;-</span> <span class="fu">C_to_F</span>(<span class="dv">22</span>);</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>temp2 <span class="ot">&lt;-</span> <span class="fu">C_to_F</span>( <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">12</span>, <span class="dv">23</span>) );</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can now see if it works and ask for help with the <code>convert_Celsius_to_Fahrenheid</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>?convert_Celsius_to_Fahrenheid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Rstudio will present the following in the Help tab. <img src="images/help_file_function.png" class="img-fluid"></p>
+<p>Now that we have the key functions and documentation, we can upload this to GitHub for the world to see and use.</p>
+</section>
+<section id="uploading-to-and-install-from-github." class="level2">
+<h2 class="anchored" data-anchor-id="uploading-to-and-install-from-github.">Uploading to and install from GitHub.</h2>
+<p>Note that putting the R package on GitHub is not a requirement, but it is probably the easiest way to share your work.</p>
+<p><em>EsCHER workshop: if you are experiences with GitHub or your working computer restricts you from using it, you can also share your package via a .zipfile. Please read the section below about those instructions.</em></p>
+</section>
+<section id="develop-your-own-package" class="level2">
+<h2 class="anchored" data-anchor-id="develop-your-own-package">Develop your own package</h2>
+<p>You now have the basis knowledge to develop a package. Ready to develop your own? For now, you might like to start small, and just add one or two extra functions to the package you have already created.</p>
+</section>
+<section id="peer-review" class="level2">
+<h2 class="anchored" data-anchor-id="peer-review">Peer review</h2>
+<p>Peer review is crucial for R packages because it ensures the quality and reliability of the code by having experts scrutinize the functionality and design before public release. This process helps identify and rectify errors, improve code efficiency, and enhance usability, which might otherwise be missed by the programmers. Peer review can also be useful to get feedback on coding standards and best practices and to robustness and maintainability of the package. While CRAN always requires this rigorous review process, it is also highly recommended to let your code be reviewed when hosted on GitHub. Therefore, we like you to practice this with our group and give and provide some feedback.</p>
+<section id="share-your-work-for-peer-review" class="level3">
+<h3 class="anchored" data-anchor-id="share-your-work-for-peer-review">Share your work for peer review</h3>
+<p>If you have published your package on GitHub, you can share the link with an other group to review the package. Please make sure you GitHub repository is public. Otherwise, you can upload your work to the shared OneDrive folder: <a href="https://liveeur-my.sharepoint.com/:f:/r/personal/85719ekr_eur_nl/Documents/EsCHER%20R%20workshop%20April%202023?csf=1&amp;web=1&amp;e=hDQllq">EsCHER R workshop April 2023</a>).</p>
+<section id="acknowledgement" class="level4">
+<h4 class="anchored" data-anchor-id="acknowledgement">Acknowledgement</h4>
+<p>This session is (originally) created for the EsCHER workshop: <strong>EsCHER’s R-evolution: Mastering R Package Development for Health Economics</strong> hosted at Erasmus School of Health Policy and Management on April 23rd.</p>
+<p>We thank EsCHER for the funding for this workshop. More about EsCHER can be found <a href="https://www.eur.nl/en/research/research-groups-initiatives/escher">here</a>.</p>
+<p>For text editing and spelling checks we made use of ChatGPT 4.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

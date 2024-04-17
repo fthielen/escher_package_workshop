@@ -1,6 +1,6 @@
 # EsCHER's R-evolution: Mastering R Package Development for Health Economics
 
-![](images/course.png)
+![](images/course.png){width=80%}
 
 ## 👋 Welcome to EsCHER's R-evolution
 
@@ -22,6 +22,8 @@ To get most out of this workshop, we recommend you to read up on couple of thing
 Before you attend the workshop, please make sure you have the following things ready:
 
 - **R and RStudio**: Make sure you have R and RStudio installed on your computer. You can download R from [here](https://cran.r-project.org) and RStudio from [here](https://www.rstudio.com/products/rstudio/download/).
+
+- Think about a case example that you would like to work during this workshop for developing an R package. It can be a simple example, but it should be something that you are familiar with and that you can use as a case study for the workshop. Please make sure that you ideas on writing some own functions for this case study. These could be functions that you already created or you come-up with new ones.
 
 ### Nice to haves
 The following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.

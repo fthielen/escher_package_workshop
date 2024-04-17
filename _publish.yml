@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 5580392c-1975-4d27-8f71-2acee389b69c
+      url: 'https://fthielen.quarto.pub/escher-package-ws'

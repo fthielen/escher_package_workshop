@@ -1,5 +1,8 @@
 project:
   type: website
+  
+execute:
+  eval: false
 
 website:
   title: "EsCHER's R-evolution: Mastering R Package Development for Health Economics"
@@ -18,16 +21,14 @@ website:
         text: Home
       - href: timetable.qmd
         text: Timetable
+      - href: preclass.qmd
+        text: Pre-class
       - section: "Coding exercises"
         contents:
-          - href: coding/exercises.qmd
-            text: Pre-class
+          - href: workshop.qmd
+            text: Workshop
           - section: "In-class"
             contents:
-              - href: day1/day1_in.qmd
-                text: Programme
-              - href: day1/1_acquire.qmd
-                text: "Tutorial: Acquire"
               - href: day1/day1_extra.qmd
                 text: "Slides & extra material"
 format:
