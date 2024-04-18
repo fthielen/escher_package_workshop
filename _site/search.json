@@ -40,6 +40,82 @@
     ]
   },
   {
+    "objectID": "course_material/starwars/starwars_example.html#introduction",
+    "href": "course_material/starwars/starwars_example.html#introduction",
+    "title": "Star Wars example",
+    "section": "Introduction",
+    "text": "Introduction\nThis setcion covers the basics of handling and analysing the starwars dataset from the dplyr package in R. You can use these example functions and dataset to create and use custom functions to explore this dataset for your mini-package.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#the-star-wars-dataset",
+    "href": "course_material/starwars/starwars_example.html#the-star-wars-dataset",
+    "title": "Star Wars example",
+    "section": "The Star Wars Dataset",
+    "text": "The Star Wars Dataset\n\nIncludes details about characters from the Star Wars universe.\nVariables include: name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld, species.\nSome variables are lists and need special handling. If you load the my_stawars.csv dataset, these columns are dropped for easier handling.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#function-top_starwars",
+    "href": "course_material/starwars/starwars_example.html#function-top_starwars",
+    "title": "Star Wars example",
+    "section": "Function: top_starwars",
+    "text": "Function: top_starwars\n\n\nPurpose\nReturns a data frame ranked by a user-specified variable. Useful for sorting characters by attributes like height or mass.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#code",
+    "href": "course_material/starwars/starwars_example.html#code",
+    "title": "Star Wars example",
+    "section": "Code",
+    "text": "Code\n\n# Define the function\ntop_starwars &lt;- function(variable = \"height\", top = 10) {\n        # Load necessary libraries\n        require(dplyr)\n        \n        # Ensure the dataset is loaded\n        if (!exists(\"starwars\")) {\n                starwars &lt;- dplyr::starwars\n        }\n        \n        # Check if the specified variable exists in the dataframe\n        if (!variable %in% names(starwars)) {\n                stop(\"The specified variable does not exist in the starwars dataset.\")\n        }\n        \n        # Sort the dataframe based on the specified variable and handle missing values\n        ranked_df &lt;- starwars %&gt;% \n                filter(!is.na(variable)) %&gt;%\n                arrange(desc(across(all_of(variable)))) %&gt;%\n                select(name, all_of(variable)) %&gt;% \n                slice_head(n = top)\n        \n        # Return the top n entries\n        return(ranked_df)\n}\n\n# Example usage:\n# top_starwars(\"mass\", 5)",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#function-plot_relationship",
+    "href": "course_material/starwars/starwars_example.html#function-plot_relationship",
+    "title": "Star Wars example",
+    "section": "Function: plot_relationship",
+    "text": "Function: plot_relationship\n\n\n\n\nPurpose\nPlots the relationship between two variables in the starwars dataset, showcasing the potential correlations or distributions.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#summary",
+    "href": "course_material/starwars/starwars_example.html#summary",
+    "title": "Star Wars example",
+    "section": "Summary",
+    "text": "Summary\nHere you explored the starwars dataset and developed two functions:\n\ntop_starwars: To rank characters based on any numeric attribute.\nplot_relationship: To visualize relationships between two attributes.\n\nFeel free to explore further and modify these functions as needed!",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "timetable.html",
+    "href": "timetable.html",
+    "title": "Timetable",
+    "section": "",
+    "text": "Timetable\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Cofee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 15:30\n🧊 Drinks\nOpen space on the 7th floor",
+    "crumbs": [
+      "Timetable"
+    ]
+  },
+  {
     "objectID": "workshop.html",
     "href": "workshop.html",
     "title": "R package workshop",
@@ -161,16 +237,6 @@
     ]
   },
   {
-    "objectID": "timetable.html",
-    "href": "timetable.html",
-    "title": "Timetable",
-    "section": "",
-    "text": "Timetable\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Cofee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 15:30\n🧊 Drinks\nOpen space on the 7th floor",
-    "crumbs": [
-      "Timetable"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
@@ -208,72 +274,6 @@
     "text": "Before you attend the workshop, please make sure you have the following things ready:\n\nR and RStudio: Make sure you have R and RStudio installed on your computer. You can download R from here and RStudio from here.\nThink about a case example that you would like to work during this workshop for developing an R package. It can be a simple example, but it should be something that you are familiar with and that you can use as a case study for the workshop. Please make sure that you ideas on writing some own functions for this case study. These could be functions that you already created or you come-up with new ones.\n\n\n\n\nThe following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.\n\nR Packages: Make sure you have the following R packages installed: devtools, roxygen2, testthat, usethis\nGit: Make sure you have Git installed on your computer. You can download Git from here or the EUR software center.\nGitHub Account: Make sure you have a GitHub account. If you don’t have one, you can create one here. In any case, we strongly recommend to upgrade to a free teachers account to get free private repositories and other benefits such as GitHub Copilot. It takes some hurdles to get the teacher account, so we recommend you to start the process as soon as possible. It is worth it!\nInstall GitHub Desktop: GitHub Desktop is a graphical user interface for GitHub. You can download GitHub Desktop from here.",
     "crumbs": [
       "Home"
-    ]
-  },
-  {
-    "objectID": "course_material/starwars/starwars_example.html#introduction",
-    "href": "course_material/starwars/starwars_example.html#introduction",
-    "title": "Star Wars example",
-    "section": "Introduction",
-    "text": "Introduction\nThis setcion covers the basics of handling and analysing the starwars dataset from the dplyr package in R. You can use these example functions and dataset to create and use custom functions to explore this dataset for your mini-package.",
-    "crumbs": [
-      "Coding exercises",
-      "Star Wars example"
-    ]
-  },
-  {
-    "objectID": "course_material/starwars/starwars_example.html#the-star-wars-dataset",
-    "href": "course_material/starwars/starwars_example.html#the-star-wars-dataset",
-    "title": "Star Wars example",
-    "section": "The Star Wars Dataset",
-    "text": "The Star Wars Dataset\n\nIncludes details about characters from the Star Wars universe.\nVariables include: name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld, species.\nSome variables are lists and need special handling. If you load the my_stawars.csv dataset, these columns are dropped for easier handling.",
-    "crumbs": [
-      "Coding exercises",
-      "Star Wars example"
-    ]
-  },
-  {
-    "objectID": "course_material/starwars/starwars_example.html#function-top_starwars",
-    "href": "course_material/starwars/starwars_example.html#function-top_starwars",
-    "title": "Star Wars example",
-    "section": "Function: top_starwars",
-    "text": "Function: top_starwars\n\n\nPurpose\nReturns a data frame ranked by a user-specified variable. Useful for sorting characters by attributes like height or mass.",
-    "crumbs": [
-      "Coding exercises",
-      "Star Wars example"
-    ]
-  },
-  {
-    "objectID": "course_material/starwars/starwars_example.html#function-plot_relationship",
-    "href": "course_material/starwars/starwars_example.html#function-plot_relationship",
-    "title": "Star Wars example",
-    "section": "Function: plot_relationship",
-    "text": "Function: plot_relationship\n\n\n\n\nPurpose\nPlots the relationship between two variables in the starwars dataset, showcasing the potential correlations or distributions.",
-    "crumbs": [
-      "Coding exercises",
-      "Star Wars example"
-    ]
-  },
-  {
-    "objectID": "course_material/starwars/starwars_example.html#summary",
-    "href": "course_material/starwars/starwars_example.html#summary",
-    "title": "Star Wars example",
-    "section": "Summary",
-    "text": "Summary\nHere you explored the starwars dataset and developed two functions:\n\ntop_starwars: To rank characters based on any numeric attribute.\nplot_relationship: To visualize relationships between two attributes.\n\nFeel free to explore further and modify these functions as needed!",
-    "crumbs": [
-      "Coding exercises",
-      "Star Wars example"
-    ]
-  },
-  {
-    "objectID": "course_material/starwars/starwars_example.html#code",
-    "href": "course_material/starwars/starwars_example.html#code",
-    "title": "Star Wars example",
-    "section": "Code",
-    "text": "Code\n\n# Define the function\ntop_starwars &lt;- function(variable = \"height\", top = 10) {\n        # Load necessary libraries\n        require(dplyr)\n        \n        # Ensure the dataset is loaded\n        if (!exists(\"starwars\")) {\n                starwars &lt;- dplyr::starwars\n        }\n        \n        # Check if the specified variable exists in the dataframe\n        if (!variable %in% names(starwars)) {\n                stop(\"The specified variable does not exist in the starwars dataset.\")\n        }\n        \n        # Sort the dataframe based on the specified variable and handle missing values\n        ranked_df &lt;- starwars %&gt;% \n                filter(!is.na(variable)) %&gt;%\n                arrange(desc(across(all_of(variable)))) %&gt;%\n                select(name, all_of(variable)) %&gt;% \n                slice_head(n = top)\n        \n        # Return the top n entries\n        return(ranked_df)\n}\n\n# Example usage:\n# top_starwars(\"mass\", 5)",
-    "crumbs": [
-      "Coding exercises",
-      "Star Wars example"
     ]
   }
 ]
