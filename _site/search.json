@@ -44,7 +44,7 @@
     "href": "timetable.html",
     "title": "Timetable",
     "section": "",
-    "text": "Timetable\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Cofee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Prof. dr. Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 15:30\n🧊 Drinks\nOpen space on the 7th floor",
+    "text": "Timetable\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Cofee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 15:30\n🧊 Drinks\nOpen space on the 7th floor",
     "crumbs": [
       "Timetable"
     ]
@@ -168,6 +168,46 @@
     "crumbs": [
       "Coding exercises",
       "Workshop"
+    ]
+  },
+  {
+    "objectID": "preclass.html",
+    "href": "preclass.html",
+    "title": "Things you might want to know or have",
+    "section": "",
+    "text": "Here are some things you might want to know or have before the first class.\n\n\n\n\nWhether you need to install git on your computer depends on your operating system.\n\n\nIf you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press command (⌘) + Space, then type ‘terminal’) and typing git --version. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from https://git-scm.com/.\n\n\n\nIf you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you have admin rights, you can download git directly from https://git-scm.com/. In case you are working on a computer managed by the EUR, you can install git via the Software Center.\nOnce you have git installed, you should be able to open a command prompt and type git --version to see the version of git you have installed. If you see a version number, you are good to go.\n\n\n\n\nOnce you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.\n\nMac users: open the terminal (press command (⌘) + Space, then type ‘terminal’)\nWindows users: open git bash programme (press Windows + S, then type ‘git bash’ and press Enter)\n\nIn the command/shell prompt, type the following commands, replacing Your Name and example@example.com with your name and email address.\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"example@example.com\"\ngit config --global --list\n\nThe last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.\n\n\n\n\nYou will need a GitHub account for this course. If you do not already have one, you can create one at GitHub. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub Teachers or Student account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.\n\n\n\n\n\n\nNote\n\n\n\nMake sure to use the same email address for your GitHub account and for configuring git locally!\n\n\n\n\n\nYou can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from https://desktop.github.com/.\nIf you prefer to use another Git client, you are free to do so. Some other popular Git clients are Sourcetree and GitKraken.\nIf you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the Happy Git and GitHub for the useR guidele in Chapter 12.",
+    "crumbs": [
+      "Pre-class"
+    ]
+  },
+  {
+    "objectID": "preclass.html#making-sure-git-works-on-your-computer",
+    "href": "preclass.html#making-sure-git-works-on-your-computer",
+    "title": "Things you might want to know or have",
+    "section": "",
+    "text": "Whether you need to install git on your computer depends on your operating system.\n\n\nIf you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press command (⌘) + Space, then type ‘terminal’) and typing git --version. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from https://git-scm.com/.\n\n\n\nIf you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you have admin rights, you can download git directly from https://git-scm.com/. In case you are working on a computer managed by the EUR, you can install git via the Software Center.\nOnce you have git installed, you should be able to open a command prompt and type git --version to see the version of git you have installed. If you see a version number, you are good to go.\n\n\n\n\nOnce you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.\n\nMac users: open the terminal (press command (⌘) + Space, then type ‘terminal’)\nWindows users: open git bash programme (press Windows + S, then type ‘git bash’ and press Enter)\n\nIn the command/shell prompt, type the following commands, replacing Your Name and example@example.com with your name and email address.\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"example@example.com\"\ngit config --global --list\n\nThe last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.",
+    "crumbs": [
+      "Pre-class"
+    ]
+  },
+  {
+    "objectID": "preclass.html#create-a-github-account",
+    "href": "preclass.html#create-a-github-account",
+    "title": "Things you might want to know or have",
+    "section": "",
+    "text": "You will need a GitHub account for this course. If you do not already have one, you can create one at GitHub. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub Teachers or Student account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.\n\n\n\n\n\n\nNote\n\n\n\nMake sure to use the same email address for your GitHub account and for configuring git locally!",
+    "crumbs": [
+      "Pre-class"
+    ]
+  },
+  {
+    "objectID": "preclass.html#install-github-desktop-or-another-git-client",
+    "href": "preclass.html#install-github-desktop-or-another-git-client",
+    "title": "Things you might want to know or have",
+    "section": "",
+    "text": "You can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from https://desktop.github.com/.\nIf you prefer to use another Git client, you are free to do so. Some other popular Git clients are Sourcetree and GitKraken.\nIf you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the Happy Git and GitHub for the useR guidele in Chapter 12.",
+    "crumbs": [
+      "Pre-class"
     ]
   }
 ]

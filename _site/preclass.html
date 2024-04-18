@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -80,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./timetable.html">Timetable</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./preclass.html">Pre-class</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -117,13 +151,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./timetable.html" class="sidebar-item-text sidebar-link active">
+  <a href="./timetable.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Timetable</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./preclass.html" class="sidebar-item-text sidebar-link">
+  <a href="./preclass.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Pre-class</span></a>
   </div>
 </li>
@@ -171,7 +205,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#timetable" id="toc-timetable" class="nav-link active" data-scroll-target="#timetable">Timetable</a></li>
+  <li><a href="#things-you-might-want-to-know-or-have" id="toc-things-you-might-want-to-know-or-have" class="nav-link active" data-scroll-target="#things-you-might-want-to-know-or-have">Things you might want to know or have</a>
+  <ul class="collapse">
+  <li><a href="#making-sure-git-works-on-your-computer" id="toc-making-sure-git-works-on-your-computer" class="nav-link" data-scroll-target="#making-sure-git-works-on-your-computer">Making sure git works on your computer</a>
+  <ul class="collapse">
+  <li><a href="#install-git" id="toc-install-git" class="nav-link" data-scroll-target="#install-git">Install git</a></li>
+  <li><a href="#configure-git" id="toc-configure-git" class="nav-link" data-scroll-target="#configure-git">Configure git</a></li>
+  </ul></li>
+  <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link" data-scroll-target="#create-a-github-account">Create a GitHub account</a></li>
+  <li><a href="#install-github-desktop-or-another-git-client" id="toc-install-github-desktop-or-another-git-client" class="nav-link" data-scroll-target="#install-github-desktop-or-another-git-client">Install GitHub Desktop or another git client</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -181,51 +224,65 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="timetable" class="level1">
-<h1>Timetable</h1>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Time</th>
-<th>Title</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>09:30 - 10:00</td>
-<td><strong>☕️ Arrival &amp; Cofee</strong></td>
-<td>Open space on the 7<sup>th</sup> floor</td>
-</tr>
-<tr class="even">
-<td>10:00 - 10:30</td>
-<td><strong>👋 Welcome &amp; Introduction</strong></td>
-<td>J7-55</td>
-</tr>
-<tr class="odd">
-<td>10:30 - 11:45</td>
-<td><strong>🎤 Keynote by <a href="https://www.linkedin.com/in/gianluca-baio-b893879/?originalSubdomain=uk">Gianluca Baio</a></strong></td>
-<td>J7-55</td>
-</tr>
-<tr class="even">
-<td>11:45 - 12:30</td>
-<td><strong>🥗 Lunch</strong></td>
-<td>Open space on the 7<sup>th</sup> floor</td>
-</tr>
-<tr class="odd">
-<td>12:30 - 14:45</td>
-<td><strong>💻 Coding exercise: build your own package</strong></td>
-<td>J7-43, J7-45, J7-47</td>
-</tr>
-<tr class="even">
-<td>14:45 - 15:30</td>
-<td><strong>🧊 Drinks</strong></td>
-<td>Open space on the 7<sup>th</sup> floor</td>
-</tr>
-</tbody>
-</table>
+<section id="things-you-might-want-to-know-or-have" class="level1">
+<h1>Things you might want to know or have</h1>
+<p>Here are some things you might want to know or have before the first class.</p>
+<section id="making-sure-git-works-on-your-computer" class="level2">
+<h2 class="anchored" data-anchor-id="making-sure-git-works-on-your-computer">Making sure git works on your computer</h2>
+<section id="install-git" class="level3">
+<h3 class="anchored" data-anchor-id="install-git">Install git</h3>
+<p>Whether you need to install git on your computer depends on your operating system.</p>
+<section id="mac-users" class="level4">
+<h4 class="anchored" data-anchor-id="mac-users">Mac users</h4>
+<p>If you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press <code>command (⌘)</code> + <code>Space</code>, then type ‘terminal’) and typing <code>git --version</code>. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from <a href="https://git-scm.com/">https://git-scm.com/</a>.</p>
+</section>
+<section id="windows-users" class="level4">
+<h4 class="anchored" data-anchor-id="windows-users">Windows users</h4>
+<p>If you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you <strong>have admin rights</strong>, you can download git directly from <a href="https://git-scm.com/">https://git-scm.com/</a>. In case you are working on a computer <strong>managed by the EUR</strong>, you can install git via the Software Center.</p>
+<p>Once you have git installed, you should be able to open a command prompt and type <code>git --version</code> to see the version of git you have installed. If you see a version number, you are good to go.</p>
+</section>
+</section>
+<section id="configure-git" class="level3">
+<h3 class="anchored" data-anchor-id="configure-git">Configure git</h3>
+<p>Once you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.</p>
+<ul>
+<li>Mac users: open the terminal (press <code>command (⌘)</code> + <code>Space</code>, then type ‘terminal’)</li>
+<li>Windows users: open git bash programme (press <code>Windows</code> + <code>S</code>, then type ‘git bash’ and press <code>Enter</code>)</li>
+</ul>
+<p>In the command/shell prompt, type the following commands, replacing <code>Your Name</code> and <code>example@example.com</code> with your name and email address.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"Your Name"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.email <span class="st">"example@example.com"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global <span class="sc">--</span>list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.</p>
+</section>
+</section>
+<section id="create-a-github-account" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-github-account">Create a GitHub account</h2>
+<p>You will need a GitHub account for this course. If you do not already have one, you can create one at <a href="www.github.com">GitHub</a>. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub <a href="https://education.github.com/teachers">Teachers</a> or <a href="https://education.github.com/students">Student</a> account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure to use the same email address for your GitHub account and for configuring git locally!</p>
+</div>
+</div>
+</section>
+<section id="install-github-desktop-or-another-git-client" class="level2">
+<h2 class="anchored" data-anchor-id="install-github-desktop-or-another-git-client">Install GitHub Desktop or another git client</h2>
+<p>You can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from <a href="https://desktop.github.com/">https://desktop.github.com/</a>.</p>
+<p>If you prefer to use another Git client, you are free to do so. Some other popular Git clients are <a href="https://www.sourcetreeapp.com/">Sourcetree</a> and <a href="https://www.gitkraken.com/">GitKraken</a>.</p>
+<p>If you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the <a href="https://happygitwithr.com">Happy Git and GitHub for the useR</a> guidele in <a href="https://happygitwithr.com/rstudio-git-github">Chapter 12</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

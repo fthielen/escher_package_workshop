@@ -1,0 +1,48 @@
+# Things you might want to know or have
+
+Here are some things you might want to know or have before the first class.
+
+## Making sure git works on your computer
+
+### Install git
+Whether you need to install git on your computer depends on your operating system. 
+
+#### Mac users
+If you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press `command (⌘)` +  `Space`, then type 'terminal') and typing `git --version`. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from [https://git-scm.com/](https://git-scm.com/).
+
+#### Windows users
+If you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you **have admin rights**, you can download git directly from [https://git-scm.com/](https://git-scm.com/). In case you are working on a computer **managed by the EUR**, you can install git via the Software Center.
+
+Once you have git installed, you should be able to open a command prompt and type `git --version` to see the version of git you have installed. If you see a version number, you are good to go.
+
+### Configure git
+Once you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.
+
+- Mac users: open the terminal (press `command (⌘)` +  `Space`, then type 'terminal')
+- Windows users: open git bash programme (press `Windows` + `S`, then type 'git bash' and press `Enter`)
+
+In the command/shell prompt, type the following commands, replacing `Your Name` and `example@example.com` with your name and email address.
+
+```{r}
+git config --global user.name "Your Name"
+git config --global user.email "example@example.com"
+git config --global --list
+```
+
+The last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.
+
+## Create a GitHub account
+
+You will need a GitHub account for this course. If you do not already have one, you can create one at [GitHub](www.github.com). We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub [Teachers](https://education.github.com/teachers) or [Student](https://education.github.com/students) account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.
+
+::: {.callout-note}
+Make sure to use the same email address for your GitHub account and for configuring git locally!
+:::
+
+## Install GitHub Desktop or another git client
+
+You can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from [https://desktop.github.com/](https://desktop.github.com/). 
+
+If you prefer to use another Git client, you are free to do so. Some other popular Git clients are [Sourcetree](https://www.sourcetreeapp.com/) and [GitKraken](https://www.gitkraken.com/).
+
+If you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the [Happy Git and GitHub for the useR](https://happygitwithr.com) guidele in [Chapter 12](https://happygitwithr.com/rstudio-git-github).
