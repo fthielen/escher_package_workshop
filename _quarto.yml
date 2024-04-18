@@ -27,10 +27,11 @@ website:
         contents:
           - href: workshop.qmd
             text: Workshop
-          - section: "In-class"
-            contents:
-              - href: day1/day1_extra.qmd
-                text: "Slides & extra material"
+          - href: course_material/starwars/starwars_example.qmd
+            text: Star Wars example
+          - href: course_material/starwars/top_starwars.R
+            text: Top Star Wars
+          
 format:
   html:
     theme: 

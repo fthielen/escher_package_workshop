@@ -1,0 +1,106 @@
+---
+title: "Star Wars example"
+format: revealjs
+---
+
+## Introduction
+
+This setcion covers the basics of handling and analysing the `starwars` dataset from the `dplyr` package in R. You can use these example functions and dataset to create and use custom functions to explore this dataset for your mini-package.
+
+---
+
+## The Star Wars Dataset
+
+- Includes details about characters from the Star Wars universe.
+- Variables include: `name`, `height`, `mass`, `hair_color`, `skin_color`, `eye_color`, `birth_year`, `gender`, `homeworld`, `species`.
+- Some variables are lists and need special handling. If you load the `my_stawars.csv` dataset, these columns are dropped for easier handling.
+
+---
+
+## Function: top_starwars
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+### Purpose
+
+Returns a data frame ranked by a user-specified variable. Useful for sorting characters by attributes like height or mass.
+
+:::
+
+:::{.column width="40%"}
+
+![](../../images/sw1.png)
+
+:::
+:::
+
+---
+
+## Code
+
+```{r}
+#| echo: true
+
+# Define the function
+top_starwars <- function(variable = "height", top = 10) {
+        # Load necessary libraries
+        require(dplyr)
+        
+        # Ensure the dataset is loaded
+        if (!exists("starwars")) {
+                starwars <- dplyr::starwars
+        }
+        
+        # Check if the specified variable exists in the dataframe
+        if (!variable %in% names(starwars)) {
+                stop("The specified variable does not exist in the starwars dataset.")
+        }
+        
+        # Sort the dataframe based on the specified variable and handle missing values
+        ranked_df <- starwars %>% 
+                filter(!is.na(variable)) %>%
+                arrange(desc(across(all_of(variable)))) %>%
+                select(name, all_of(variable)) %>% 
+                slice_head(n = top)
+        
+        # Return the top n entries
+        return(ranked_df)
+}
+
+# Example usage:
+# top_starwars("mass", 5)
+
+```
+
+
+---
+
+## Function: plot_relationship
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/sw2.png)
+:::
+
+:::{.column width="60%"}
+
+### Purpose
+Plots the relationship between two variables in the starwars dataset, showcasing the potential correlations or distributions.
+
+:::
+:::
+
+---
+
+## Summary
+
+Here you explored the starwars dataset and developed two functions:
+
+- top_starwars: To rank characters based on any numeric attribute.
+- plot_relationship: To visualize relationships between two attributes.
+
+Feel free to explore further and modify these functions as needed!

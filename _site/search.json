@@ -1,52 +1,42 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
+    "objectID": "preclass.html",
+    "href": "preclass.html",
+    "title": "Things you might want to know or have",
     "section": "",
-    "text": "Welcome to the workshop “Mastering R Package Development for Health Economics” with Prof. dr. Gianluca Baio.\nIn this 1-day workshop, we will learn more about how to develop an R package for health economics and to what extend developing your own package can be be useful for your research.\n\n\n\nTo get most out of this workshop, we recommend you to read up on couple of things before you attend:\n\nIf you are not familiar with the basic syntax of R, we recommend you to read the Introduction to R from the R documentation.\nIf you want to read-up on anything related to Data Science and R, we recommend you to read R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\nIf you are not familiar with functions in R, we recommend you to read Chapter 6 Functions from the book Advanced R by Hadley Wickham.\n\n\n\n\n\n\nBefore you attend the workshop, please make sure you have the following things ready:\n\nR and RStudio: Make sure you have R and RStudio installed on your computer. You can download R from here and RStudio from here.\nThink about a case example that you would like to work during this workshop for developing an R package. It can be a simple example, but it should be something that you are familiar with and that you can use as a case study for the workshop. Please make sure that you ideas on writing some own functions for this case study. These could be functions that you already created or you come-up with new ones.\n\n\n\n\nThe following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.\n\nR Packages: Make sure you have the following R packages installed: devtools, roxygen2, testthat, usethis\nGit: Make sure you have Git installed on your computer. You can download Git from here or the EUR software center.\nGitHub Account: Make sure you have a GitHub account. If you don’t have one, you can create one here. In any case, we strongly recommend to upgrade to a free teachers account to get free private repositories and other benefits such as GitHub Copilot. It takes some hurdles to get the teacher account, so we recommend you to start the process as soon as possible. It is worth it!\nInstall GitHub Desktop: GitHub Desktop is a graphical user interface for GitHub. You can download GitHub Desktop from here.",
+    "text": "Here are some things you might want to know or have before the first class.\n\n\n\n\nWhether you need to install git on your computer depends on your operating system.\n\n\nIf you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press command (⌘) + Space, then type ‘terminal’) and typing git --version. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from https://git-scm.com/.\n\n\n\nIf you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you have admin rights, you can download git directly from https://git-scm.com/. In case you are working on a computer managed by the EUR, you can install git via the Software Center.\nOnce you have git installed, you should be able to open a command prompt and type git --version to see the version of git you have installed. If you see a version number, you are good to go.\n\n\n\n\nOnce you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.\n\nMac users: open the terminal (press command (⌘) + Space, then type ‘terminal’)\nWindows users: open git bash programme (press Windows + S, then type ‘git bash’ and press Enter)\n\nIn the command/shell prompt, type the following commands, replacing Your Name and example@example.com with your name and email address.\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"example@example.com\"\ngit config --global --list\n\nThe last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.\n\n\n\n\nYou will need a GitHub account for this course. If you do not already have one, you can create one at GitHub. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub Teachers or Student account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.\n\n\n\n\n\n\nNote\n\n\n\nMake sure to use the same email address for your GitHub account and for configuring git locally!\n\n\n\n\n\nYou can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from https://desktop.github.com/.\nIf you prefer to use another Git client, you are free to do so. Some other popular Git clients are Sourcetree and GitKraken.\nIf you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the Happy Git and GitHub for the useR guidele in Chapter 12.",
     "crumbs": [
-      "Home"
+      "Pre-class"
     ]
   },
   {
-    "objectID": "index.html#welcome-to-eschers-r-evolution",
-    "href": "index.html#welcome-to-eschers-r-evolution",
-    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
+    "objectID": "preclass.html#making-sure-git-works-on-your-computer",
+    "href": "preclass.html#making-sure-git-works-on-your-computer",
+    "title": "Things you might want to know or have",
     "section": "",
-    "text": "Welcome to the workshop “Mastering R Package Development for Health Economics” with Prof. dr. Gianluca Baio.\nIn this 1-day workshop, we will learn more about how to develop an R package for health economics and to what extend developing your own package can be be useful for your research.",
+    "text": "Whether you need to install git on your computer depends on your operating system.\n\n\nIf you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press command (⌘) + Space, then type ‘terminal’) and typing git --version. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from https://git-scm.com/.\n\n\n\nIf you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you have admin rights, you can download git directly from https://git-scm.com/. In case you are working on a computer managed by the EUR, you can install git via the Software Center.\nOnce you have git installed, you should be able to open a command prompt and type git --version to see the version of git you have installed. If you see a version number, you are good to go.\n\n\n\n\nOnce you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.\n\nMac users: open the terminal (press command (⌘) + Space, then type ‘terminal’)\nWindows users: open git bash programme (press Windows + S, then type ‘git bash’ and press Enter)\n\nIn the command/shell prompt, type the following commands, replacing Your Name and example@example.com with your name and email address.\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"example@example.com\"\ngit config --global --list\n\nThe last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.",
     "crumbs": [
-      "Home"
+      "Pre-class"
     ]
   },
   {
-    "objectID": "index.html#course-material",
-    "href": "index.html#course-material",
-    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
+    "objectID": "preclass.html#create-a-github-account",
+    "href": "preclass.html#create-a-github-account",
+    "title": "Things you might want to know or have",
     "section": "",
-    "text": "To get most out of this workshop, we recommend you to read up on couple of things before you attend:\n\nIf you are not familiar with the basic syntax of R, we recommend you to read the Introduction to R from the R documentation.\nIf you want to read-up on anything related to Data Science and R, we recommend you to read R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\nIf you are not familiar with functions in R, we recommend you to read Chapter 6 Functions from the book Advanced R by Hadley Wickham.",
+    "text": "You will need a GitHub account for this course. If you do not already have one, you can create one at GitHub. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub Teachers or Student account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.\n\n\n\n\n\n\nNote\n\n\n\nMake sure to use the same email address for your GitHub account and for configuring git locally!",
     "crumbs": [
-      "Home"
+      "Pre-class"
     ]
   },
   {
-    "objectID": "index.html#pre-workshop-checklist",
-    "href": "index.html#pre-workshop-checklist",
-    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
+    "objectID": "preclass.html#install-github-desktop-or-another-git-client",
+    "href": "preclass.html#install-github-desktop-or-another-git-client",
+    "title": "Things you might want to know or have",
     "section": "",
-    "text": "Before you attend the workshop, please make sure you have the following things ready:\n\nR and RStudio: Make sure you have R and RStudio installed on your computer. You can download R from here and RStudio from here.\nThink about a case example that you would like to work during this workshop for developing an R package. It can be a simple example, but it should be something that you are familiar with and that you can use as a case study for the workshop. Please make sure that you ideas on writing some own functions for this case study. These could be functions that you already created or you come-up with new ones.\n\n\n\n\nThe following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.\n\nR Packages: Make sure you have the following R packages installed: devtools, roxygen2, testthat, usethis\nGit: Make sure you have Git installed on your computer. You can download Git from here or the EUR software center.\nGitHub Account: Make sure you have a GitHub account. If you don’t have one, you can create one here. In any case, we strongly recommend to upgrade to a free teachers account to get free private repositories and other benefits such as GitHub Copilot. It takes some hurdles to get the teacher account, so we recommend you to start the process as soon as possible. It is worth it!\nInstall GitHub Desktop: GitHub Desktop is a graphical user interface for GitHub. You can download GitHub Desktop from here.",
+    "text": "You can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from https://desktop.github.com/.\nIf you prefer to use another Git client, you are free to do so. Some other popular Git clients are Sourcetree and GitKraken.\nIf you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the Happy Git and GitHub for the useR guidele in Chapter 12.",
     "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "timetable.html",
-    "href": "timetable.html",
-    "title": "Timetable",
-    "section": "",
-    "text": "Timetable\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Cofee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 15:30\n🧊 Drinks\nOpen space on the 7th floor",
-    "crumbs": [
-      "Timetable"
+      "Pre-class"
     ]
   },
   {
@@ -171,43 +161,119 @@
     ]
   },
   {
-    "objectID": "preclass.html",
-    "href": "preclass.html",
-    "title": "Things you might want to know or have",
+    "objectID": "timetable.html",
+    "href": "timetable.html",
+    "title": "Timetable",
     "section": "",
-    "text": "Here are some things you might want to know or have before the first class.\n\n\n\n\nWhether you need to install git on your computer depends on your operating system.\n\n\nIf you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press command (⌘) + Space, then type ‘terminal’) and typing git --version. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from https://git-scm.com/.\n\n\n\nIf you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you have admin rights, you can download git directly from https://git-scm.com/. In case you are working on a computer managed by the EUR, you can install git via the Software Center.\nOnce you have git installed, you should be able to open a command prompt and type git --version to see the version of git you have installed. If you see a version number, you are good to go.\n\n\n\n\nOnce you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.\n\nMac users: open the terminal (press command (⌘) + Space, then type ‘terminal’)\nWindows users: open git bash programme (press Windows + S, then type ‘git bash’ and press Enter)\n\nIn the command/shell prompt, type the following commands, replacing Your Name and example@example.com with your name and email address.\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"example@example.com\"\ngit config --global --list\n\nThe last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.\n\n\n\n\nYou will need a GitHub account for this course. If you do not already have one, you can create one at GitHub. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub Teachers or Student account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.\n\n\n\n\n\n\nNote\n\n\n\nMake sure to use the same email address for your GitHub account and for configuring git locally!\n\n\n\n\n\nYou can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from https://desktop.github.com/.\nIf you prefer to use another Git client, you are free to do so. Some other popular Git clients are Sourcetree and GitKraken.\nIf you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the Happy Git and GitHub for the useR guidele in Chapter 12.",
+    "text": "Timetable\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Cofee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 15:30\n🧊 Drinks\nOpen space on the 7th floor",
     "crumbs": [
-      "Pre-class"
+      "Timetable"
     ]
   },
   {
-    "objectID": "preclass.html#making-sure-git-works-on-your-computer",
-    "href": "preclass.html#making-sure-git-works-on-your-computer",
-    "title": "Things you might want to know or have",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
     "section": "",
-    "text": "Whether you need to install git on your computer depends on your operating system.\n\n\nIf you are using a Mac, git is already installed and you are good to go. You can of course double-check by opening the terminal (press command (⌘) + Space, then type ‘terminal’) and typing git --version. If you see a version number, you are all set. If you see an error message, you may need to install git. You can do this by downloading git from https://git-scm.com/.\n\n\n\nIf you are using a Windows computer, you may need to install git. How you do this depends on the rights you have to install software. If you have admin rights, you can download git directly from https://git-scm.com/. In case you are working on a computer managed by the EUR, you can install git via the Software Center.\nOnce you have git installed, you should be able to open a command prompt and type git --version to see the version of git you have installed. If you see a version number, you are good to go.\n\n\n\n\nOnce you have git installed, you should configure it with your name and email address. You can do this by opening a command prompt.\n\nMac users: open the terminal (press command (⌘) + Space, then type ‘terminal’)\nWindows users: open git bash programme (press Windows + S, then type ‘git bash’ and press Enter)\n\nIn the command/shell prompt, type the following commands, replacing Your Name and example@example.com with your name and email address.\n\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"example@example.com\"\ngit config --global --list\n\nThe last command will show you the configuration settings for git. You should see your name and email address in the list. If you do not see them, you may have made a typo in the previous commands. You can correct this by running the commands again.",
+    "text": "Welcome to the workshop “Mastering R Package Development for Health Economics” with Prof. dr. Gianluca Baio.\nIn this 1-day workshop, we will learn more about how to develop an R package for health economics and to what extend developing your own package can be be useful for your research.\n\n\n\nTo get most out of this workshop, we recommend you to read up on couple of things before you attend:\n\nIf you are not familiar with the basic syntax of R, we recommend you to read the Introduction to R from the R documentation.\nIf you want to read-up on anything related to Data Science and R, we recommend you to read R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\nIf you are not familiar with functions in R, we recommend you to read Chapter 6 Functions from the book Advanced R by Hadley Wickham.\n\n\n\n\n\n\nBefore you attend the workshop, please make sure you have the following things ready:\n\nR and RStudio: Make sure you have R and RStudio installed on your computer. You can download R from here and RStudio from here.\nThink about a case example that you would like to work during this workshop for developing an R package. It can be a simple example, but it should be something that you are familiar with and that you can use as a case study for the workshop. Please make sure that you ideas on writing some own functions for this case study. These could be functions that you already created or you come-up with new ones.\n\n\n\n\nThe following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.\n\nR Packages: Make sure you have the following R packages installed: devtools, roxygen2, testthat, usethis\nGit: Make sure you have Git installed on your computer. You can download Git from here or the EUR software center.\nGitHub Account: Make sure you have a GitHub account. If you don’t have one, you can create one here. In any case, we strongly recommend to upgrade to a free teachers account to get free private repositories and other benefits such as GitHub Copilot. It takes some hurdles to get the teacher account, so we recommend you to start the process as soon as possible. It is worth it!\nInstall GitHub Desktop: GitHub Desktop is a graphical user interface for GitHub. You can download GitHub Desktop from here.",
     "crumbs": [
-      "Pre-class"
+      "Home"
     ]
   },
   {
-    "objectID": "preclass.html#create-a-github-account",
-    "href": "preclass.html#create-a-github-account",
-    "title": "Things you might want to know or have",
+    "objectID": "index.html#welcome-to-eschers-r-evolution",
+    "href": "index.html#welcome-to-eschers-r-evolution",
+    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
     "section": "",
-    "text": "You will need a GitHub account for this course. If you do not already have one, you can create one at GitHub. We recommend using your EUR email address for your GitHub account because this will make it easier to request a GitHub Teachers or Student account later. With such an account, you can create private repositories for free and make use of other features that are not available with a regular GitHub account such as GitHub Copilot.\n\n\n\n\n\n\nNote\n\n\n\nMake sure to use the same email address for your GitHub account and for configuring git locally!",
+    "text": "Welcome to the workshop “Mastering R Package Development for Health Economics” with Prof. dr. Gianluca Baio.\nIn this 1-day workshop, we will learn more about how to develop an R package for health economics and to what extend developing your own package can be be useful for your research.",
     "crumbs": [
-      "Pre-class"
+      "Home"
     ]
   },
   {
-    "objectID": "preclass.html#install-github-desktop-or-another-git-client",
-    "href": "preclass.html#install-github-desktop-or-another-git-client",
-    "title": "Things you might want to know or have",
+    "objectID": "index.html#course-material",
+    "href": "index.html#course-material",
+    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
     "section": "",
-    "text": "You can interact with git using the command line, but for beginners not used to working in command lines directly, it is often easier to use a graphical user interface (GUI). One popular GUI is GitHub Desktop. You can download GitHub Desktop from https://desktop.github.com/.\nIf you prefer to use another Git client, you are free to do so. Some other popular Git clients are Sourcetree and GitKraken.\nIf you do not or cannot install a git client, you can skip this step, but you then need to configure RStudio to use git. This is a little more complicated but definitely worth sorting out because you can then interact with GitHub directly from RStudio. You can configure this by following the instructions in the Happy Git and GitHub for the useR guidele in Chapter 12.",
+    "text": "To get most out of this workshop, we recommend you to read up on couple of things before you attend:\n\nIf you are not familiar with the basic syntax of R, we recommend you to read the Introduction to R from the R documentation.\nIf you want to read-up on anything related to Data Science and R, we recommend you to read R for Data Science (2e) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.\nIf you are not familiar with functions in R, we recommend you to read Chapter 6 Functions from the book Advanced R by Hadley Wickham.",
     "crumbs": [
-      "Pre-class"
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#pre-workshop-checklist",
+    "href": "index.html#pre-workshop-checklist",
+    "title": "EsCHER’s R-evolution: Mastering R Package Development for Health Economics",
+    "section": "",
+    "text": "Before you attend the workshop, please make sure you have the following things ready:\n\nR and RStudio: Make sure you have R and RStudio installed on your computer. You can download R from here and RStudio from here.\nThink about a case example that you would like to work during this workshop for developing an R package. It can be a simple example, but it should be something that you are familiar with and that you can use as a case study for the workshop. Please make sure that you ideas on writing some own functions for this case study. These could be functions that you already created or you come-up with new ones.\n\n\n\n\nThe following things are not mandatory, but they will make your life easier during the workshop. We are aware that the EUR IT-policy might not allow you to install these things on your computer easily, but we still recommend you to have them installed if you want to get most out of the workshop.\n\nR Packages: Make sure you have the following R packages installed: devtools, roxygen2, testthat, usethis\nGit: Make sure you have Git installed on your computer. You can download Git from here or the EUR software center.\nGitHub Account: Make sure you have a GitHub account. If you don’t have one, you can create one here. In any case, we strongly recommend to upgrade to a free teachers account to get free private repositories and other benefits such as GitHub Copilot. It takes some hurdles to get the teacher account, so we recommend you to start the process as soon as possible. It is worth it!\nInstall GitHub Desktop: GitHub Desktop is a graphical user interface for GitHub. You can download GitHub Desktop from here.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#introduction",
+    "href": "course_material/starwars/starwars_example.html#introduction",
+    "title": "Star Wars example",
+    "section": "Introduction",
+    "text": "Introduction\nThis setcion covers the basics of handling and analysing the starwars dataset from the dplyr package in R. You can use these example functions and dataset to create and use custom functions to explore this dataset for your mini-package.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#the-star-wars-dataset",
+    "href": "course_material/starwars/starwars_example.html#the-star-wars-dataset",
+    "title": "Star Wars example",
+    "section": "The Star Wars Dataset",
+    "text": "The Star Wars Dataset\n\nIncludes details about characters from the Star Wars universe.\nVariables include: name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld, species.\nSome variables are lists and need special handling. If you load the my_stawars.csv dataset, these columns are dropped for easier handling.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#function-top_starwars",
+    "href": "course_material/starwars/starwars_example.html#function-top_starwars",
+    "title": "Star Wars example",
+    "section": "Function: top_starwars",
+    "text": "Function: top_starwars\n\n\nPurpose\nReturns a data frame ranked by a user-specified variable. Useful for sorting characters by attributes like height or mass.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#function-plot_relationship",
+    "href": "course_material/starwars/starwars_example.html#function-plot_relationship",
+    "title": "Star Wars example",
+    "section": "Function: plot_relationship",
+    "text": "Function: plot_relationship\n\n\n\n\nPurpose\nPlots the relationship between two variables in the starwars dataset, showcasing the potential correlations or distributions.",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#summary",
+    "href": "course_material/starwars/starwars_example.html#summary",
+    "title": "Star Wars example",
+    "section": "Summary",
+    "text": "Summary\nHere you explored the starwars dataset and developed two functions:\n\ntop_starwars: To rank characters based on any numeric attribute.\nplot_relationship: To visualize relationships between two attributes.\n\nFeel free to explore further and modify these functions as needed!",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
+    ]
+  },
+  {
+    "objectID": "course_material/starwars/starwars_example.html#code",
+    "href": "course_material/starwars/starwars_example.html#code",
+    "title": "Star Wars example",
+    "section": "Code",
+    "text": "Code\n\n# Define the function\ntop_starwars &lt;- function(variable = \"height\", top = 10) {\n        # Load necessary libraries\n        require(dplyr)\n        \n        # Ensure the dataset is loaded\n        if (!exists(\"starwars\")) {\n                starwars &lt;- dplyr::starwars\n        }\n        \n        # Check if the specified variable exists in the dataframe\n        if (!variable %in% names(starwars)) {\n                stop(\"The specified variable does not exist in the starwars dataset.\")\n        }\n        \n        # Sort the dataframe based on the specified variable and handle missing values\n        ranked_df &lt;- starwars %&gt;% \n                filter(!is.na(variable)) %&gt;%\n                arrange(desc(across(all_of(variable)))) %&gt;%\n                select(name, all_of(variable)) %&gt;% \n                slice_head(n = top)\n        \n        # Return the top n entries\n        return(ranked_df)\n}\n\n# Example usage:\n# top_starwars(\"mass\", 5)",
+    "crumbs": [
+      "Coding exercises",
+      "Star Wars example"
     ]
   }
 ]
