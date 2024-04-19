@@ -4,7 +4,7 @@
 
 ## 👋 Welcome to EsCHER's R-evolution
 
-Welcome to the workshop "Mastering R Package Development for Health Economics" with [Prof. dr. Gianluca Baio](https://www.linkedin.com/in/gianluca-baio-b893879/?originalSubdomain=uk).
+Welcome to the workshop "Mastering R Package Development for Health Economics" with [Gianluca Baio](https://www.linkedin.com/in/gianluca-baio-b893879/?originalSubdomain=uk).
 
 In this 1-day workshop, we will learn more about how to develop an R package for health economics and to what extend developing your own package can be be useful for your research.
 
@@ -18,7 +18,7 @@ To get most out of this workshop, we recommend you to read up on couple of thing
 
 ## 📝 Pre-workshop checklist
 
-**For more detail on the different aspects look at the [Pre-class tab](preclass.qmd)!**
+**For more details on the different aspects look at the [pre-class tab](preclass.qmd)!**
 
 ### Must-haves
 Before you attend the workshop, please make sure you have the following things ready:
