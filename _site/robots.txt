@@ -1,1 +1,0 @@
-Sitemap: https://fthielen.quarto.pub/escher-package-ws/sitemap.xml
