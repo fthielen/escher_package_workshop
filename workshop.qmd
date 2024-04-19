@@ -19,16 +19,23 @@ The saying is true, and especially with coding. However, the aim of developing a
 To get started with an R packages including documentation, it is best to create a new R project. To do this first open Rstudio. In Rstudio, go to `File > New Project...`; the box below should show up.
 
 ![](images/new_project.png)
+---
 
 Select the option `New Directory`. The following box should appear.
 
 ![](images/new_project_pop_up.png)
+---
 
-Select the option `New Project` ![](images/new_project_select_new_repo.png)
+Select the option `New Project`
+
+![](images/new_project_select_new_repo.png)
+
+---
 
 Now give your directory a name and Browse on your computer for a good place for this R package to live. And click on `Create Project`.
 
 ![](images/new_project_name_repo.png)
+---
 
 You will now find this folder and R project on the location you set the directory. Quite likely, the project did even open in R studio. You will notice this by having the Directory Name in your right top corner of R studio.
 
@@ -71,30 +78,40 @@ The first thing we need to do is to create an new folder inside of our R package
 In R studio, you can click on the button `New Folder`.
 
 ![](images/new_folder.png)
+---
 
-The following box shows up. ![](images/new_folder_box.png)
+The following box shows up.
+
+![](images/new_folder_box.png)
+
+---
 
 Now name the folder `R` and click oke.
 
 ![](images/new_folder_give_name.png)
+---
 
 In R studio you now see the folder.
 
 ![](images/R_folder_created.png)
+---
 
 Next, we have to add an R script. You can click `File > New File > R script`.
 
 ![](images/open_r_script.png)
+---
 
 A file called `Untitled1` opens. Click on the save button and give the R script a name.
 
 ![](images/save_r_script.png)
+---
 
 Give your R script a name, select the `R` folder as the location for the file and click `Save`. This `R` folder is the folder where you will store actual R scripts with the coded functions.
 
 *\[@Gianluca or do you recommend different?*
 
 ![](images/name_r_script.png)
+---
 
 In your R repository environment you should now see the file within the R folder.
 
@@ -134,6 +151,7 @@ Click on `Black File > Text File > name the file DESCRIPTION` and click `OK`
 ![](images/create_description.png)
 
 ![](images/create_description_box.png)
+---
 
 Copy the following text to the DESCRIPTION.txt file and click `save`
 

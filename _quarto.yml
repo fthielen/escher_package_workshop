@@ -29,8 +29,7 @@ website:
             text: Workshop
           - href: course_material/starwars/starwars_example.qmd
             text: Star Wars example
-          - href: course_material/starwars/top_starwars.R
-            text: Top Star Wars
+
           
 format:
   html:

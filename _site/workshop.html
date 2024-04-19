@@ -182,12 +182,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Star Wars example</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course_material/starwars/top_starwars.R" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Top Star Wars</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -245,11 +239,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="making-a-new-r-project">Making a new R project</h2>
 <p>To get started with an R packages including documentation, it is best to create a new R project. To do this first open Rstudio. In Rstudio, go to <code>File &gt; New Project...</code>; the box below should show up.</p>
 <p><img src="images/new_project.png" class="img-fluid"></p>
+<hr>
 <p>Select the option <code>New Directory</code>. The following box should appear.</p>
 <p><img src="images/new_project_pop_up.png" class="img-fluid"></p>
-<p>Select the option <code>New Project</code> <img src="images/new_project_select_new_repo.png" class="img-fluid"></p>
+<hr>
+<p>Select the option <code>New Project</code></p>
+<p><img src="images/new_project_select_new_repo.png" class="img-fluid"></p>
+<hr>
 <p>Now give your directory a name and Browse on your computer for a good place for this R package to live. And click on <code>Create Project</code>.</p>
 <p><img src="images/new_project_name_repo.png" class="img-fluid"></p>
+<hr>
 <p>You will now find this folder and R project on the location you set the directory. Quite likely, the project did even open in R studio. You will notice this by having the Directory Name in your right top corner of R studio.</p>
 <p><img src="images/R_project_opened.png" class="img-fluid"></p>
 <p>Within the folder, the R project is shown as a file ending with <code>.Rproj</code> .</p>
@@ -292,18 +291,26 @@ Extra information
 <p>The first thing we need to do is to create an new folder inside of our R package repository called <code>R</code>.</p>
 <p>In R studio, you can click on the button <code>New Folder</code>.</p>
 <p><img src="images/new_folder.png" class="img-fluid"></p>
-<p>The following box shows up. <img src="images/new_folder_box.png" class="img-fluid"></p>
+<hr>
+<p>The following box shows up.</p>
+<p><img src="images/new_folder_box.png" class="img-fluid"></p>
+<hr>
 <p>Now name the folder <code>R</code> and click oke.</p>
 <p><img src="images/new_folder_give_name.png" class="img-fluid"></p>
+<hr>
 <p>In R studio you now see the folder.</p>
 <p><img src="images/R_folder_created.png" class="img-fluid"></p>
+<hr>
 <p>Next, we have to add an R script. You can click <code>File &gt; New File &gt; R script</code>.</p>
 <p><img src="images/open_r_script.png" class="img-fluid"></p>
+<hr>
 <p>A file called <code>Untitled1</code> opens. Click on the save button and give the R script a name.</p>
 <p><img src="images/save_r_script.png" class="img-fluid"></p>
+<hr>
 <p>Give your R script a name, select the <code>R</code> folder as the location for the file and click <code>Save</code>. This <code>R</code> folder is the folder where you will store actual R scripts with the coded functions.</p>
 <p><em>[<span class="citation" data-cites="Gianluca">@Gianluca</span> or do you recommend different?</em></p>
 <p><img src="images/name_r_script.png" class="img-fluid"></p>
+<hr>
 <p>In your R repository environment you should now see the file within the R folder.</p>
 <p><img src="images/script_in_R_folder.png" class="img-fluid"></p>
 <p>Within this folder you can save as many R scripts, <code>.R</code> files, as you like. And each of these <code>.R</code>. files can have as any functions you want. You could, for example, give each function its own file, but for large projects, you might like to group similar functions in the same R file.</p>
@@ -332,6 +339,7 @@ Extra information
 <p>Click on <code>Black File &gt; Text File &gt; name the file DESCRIPTION</code> and click <code>OK</code></p>
 <p><img src="images/create_description.png" class="img-fluid"></p>
 <p><img src="images/create_description_box.png" class="img-fluid"></p>
+<hr>
 <p>Copy the following text to the DESCRIPTION.txt file and click <code>save</code></p>
 <pre><code>Package: My R package EsCHER
 Type: Package

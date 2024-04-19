@@ -16,7 +16,9 @@ To get most out of this workshop, we recommend you to read up on couple of thing
 - If you want to read-up on anything related to Data Science and R, we recommend you to read [R for Data Science (2e)](https://r4ds.hadley.nz) by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund.
 - If you are not familiar with *functions* in R, we recommend you to read [Chapter 6 Functions](https://adv-r.hadley.nz/functions.html) from the book *Advanced R* by Hadley Wickham.
 
-## 📝 Pre-Workshop Checklist
+## 📝 Pre-workshop checklist
+
+**For more detail on the different aspects look at the [Pre-class tab](preclass.qmd)!**
 
 ### Must-haves
 Before you attend the workshop, please make sure you have the following things ready:
