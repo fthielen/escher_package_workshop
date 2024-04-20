@@ -23,6 +23,13 @@ website:
         text: Timetable
       - href: preclass.qmd
         text: Pre-class
+      - section: "Coding exercises"
+        contents:
+          - href: workshop.qmd
+            text: Workshop
+          - href: course_material/starwars/starwars_example.qmd
+            text: Star Wars example
+
           
 format:
   html:
