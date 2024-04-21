@@ -3,14 +3,13 @@
 This section covers the basics of handling and analysing the `starwars` dataset from the `dplyr` package in R. You can use these example functions and dataset to create and use custom functions to explore this dataset for your mini-package.
 
 
-
 ## The Star Wars Dataset
 
+- Is part of the `dplyr` package in R.
 - Includes details about characters from the Star Wars universe.
-- Variables include: `name`, `height`, `mass`, `hair_color`, `skin_color`, `eye_color`, `birth_year`, `gender`, `homeworld`, `species`.
-- Some variables are lists and need special handling. If you load the `my_stawars.csv` dataset, these columns are dropped for easier handling.
+- Variables include: name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld, species.
+- Some variables are lists and need special handling. If you load the `my_stawars.csv` dataset [here](my_starwars.csv), these columns are dropped for easier handling.
 
----
 
 ## Function: top_starwars
 
@@ -91,6 +90,8 @@ Plots the relationship between two variables in the starwars dataset, showcasing
 ### Code
 
 ```{r}
+#| echo: true
+
 # Define the function
 plot_relationship <- function(x, y) {
         
@@ -136,11 +137,13 @@ plot_relationship <- function(x, y) {
 ```
 
 
-## Summary
+## Next steps
 
-Here you explored the starwars dataset and developed two functions:
+Use the provided dataset ([here](my_starwars.csv)) and at least one of these functions to build your own mini-package.
 
-- top_starwars: To rank characters based on any numeric attribute.
-- plot_relationship: To visualize relationships between two attributes.
+Remember that to provide a meaningful documentation for your functions which should include:
 
-Feel free to explore further and modify these functions as needed!
+- a description of the function,
+- the input parameters,
+- the output,
+- and an example of usage.

@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../presentation.html">Coding exercises</a></li><li class="breadcrumb-item"><a href="../../course_material/starwars/starwars_example.html">Star Wars example</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -161,6 +161,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Pre-class</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Coding exercises</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../workshop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workshop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course_material/starwars/starwars_example.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Star Wars example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course_material/penguins/penguins_example.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Penguin example</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -181,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#code-1" id="toc-code-1" class="nav-link" data-scroll-target="#code-1">Code</a></li>
   </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
   </ul>
 </nav>
     </div>
@@ -198,11 +233,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-star-wars-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="the-star-wars-dataset">The Star Wars Dataset</h2>
 <ul>
+<li>Is part of the <code>dplyr</code> package in R.</li>
 <li>Includes details about characters from the Star Wars universe.</li>
-<li>Variables include: <code>name</code>, <code>height</code>, <code>mass</code>, <code>hair_color</code>, <code>skin_color</code>, <code>eye_color</code>, <code>birth_year</code>, <code>gender</code>, <code>homeworld</code>, <code>species</code>.</li>
-<li>Some variables are lists and need special handling. If you load the <code>my_stawars.csv</code> dataset, these columns are dropped for easier handling.</li>
+<li>Variables include: name, height, mass, hair_color, skin_color, eye_color, birth_year, gender, homeworld, species.</li>
+<li>Some variables are lists and need special handling. If you load the <code>my_stawars.csv</code> dataset <a href="my_starwars.csv">here</a>, these columns are dropped for easier handling.</li>
 </ul>
-<hr>
 </section>
 <section id="function-top_starwars" class="level2">
 <h2 class="anchored" data-anchor-id="function-top_starwars">Function: top_starwars</h2>
@@ -309,14 +344,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Here you explored the starwars dataset and developed two functions:</p>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
+<p>Use the provided dataset (<a href="my_starwars.csv">here</a>) and at least one of these functions to build your own mini-package.</p>
+<p>Remember that to provide a meaningful documentation for your functions which should include:</p>
 <ul>
-<li>top_starwars: To rank characters based on any numeric attribute.</li>
-<li>plot_relationship: To visualize relationships between two attributes.</li>
+<li>a description of the function,</li>
+<li>the input parameters,</li>
+<li>the output,</li>
+<li>and an example of usage.</li>
 </ul>
-<p>Feel free to explore further and modify these functions as needed!</p>
 
 
 </section>

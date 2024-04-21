@@ -2,7 +2,7 @@
 
 Here we explain are some things to have ready before the first class. Please make sure you have all items ready on the checklist
 
-- [x] Looking forward on the day
+- [x] Looking forward to the day
 - [ ] R and RStudio installed
 - [ ] Making sure git works on your computer (i.e., it is installed and you introduced yourself to git)
 - [ ] GitHub account created and being able to log-in

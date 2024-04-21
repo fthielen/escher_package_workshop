@@ -1,0 +1,115 @@
+## Introduction
+
+This section covers the basics of handling and analyzing the `palmerpenguins` dataset. You can use these example functions and dataset to create and use custom functions to explore this dataset for your mini-package.
+
+## The Palmer Penguins Dataset
+
+- Is a relatively new dataset that contains information about penguins and is accessible through the `palmerpenguins` package.
+- Includes data about penguin species collected from Palmer Station, Antarctica.
+- Variables include: species, island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex, and year.
+- The dataset is clean and requires minimal preprocessing for analysis.
+- Download it [here](my_penguins.csv)
+
+## Function: penguin_summary
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+### Purpose
+
+Returns a data frame with summary statistics. Useful for quickly summarising penguins by attributes like flipper length or body mass.
+
+:::
+
+:::{.column width="40%"}
+
+![](../../images/pp1.png)
+
+:::
+:::
+
+
+### Code
+
+```{r}
+#| echo: true
+
+# Function to calculate summary statistics for a specified numeric variable by species
+summarize_species <- function(data, variable) {
+        
+        require(dplyr)
+        
+        data %>%
+                group_by(species) %>%
+                summarise(
+                        Count = n(),
+                        Mean = mean({{variable}}, na.rm = TRUE),
+                        SD = sd({{variable}}, na.rm = TRUE),
+                        Min = min({{variable}}, na.rm = TRUE),
+                        Max = max({{variable}}, na.rm = TRUE)
+                ) %>%
+                ungroup()
+}
+
+# Example usage:
+# summarize_species(data = palmerpenguins::penguins,
+#                  variable = flipper_length_mm)
+
+```
+
+
+
+## Function: penguin_plot
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+![](../../images/pp2.png)
+:::
+
+:::{.column width="60%"}
+
+### Purpose
+Plots a histogram of the selected attribute for each of the palmerpenguins species.
+
+:::
+:::
+
+
+### Code
+
+```{r}
+#| echo: true
+
+# Function to create a histogram for each species based on a specified numeric variable
+plot_species_distribution <- function(data, variable_name) {
+        
+        require(ggplot2)
+        
+        ggplot(data, aes_string(x = variable_name, fill = "species")) +
+                geom_histogram(bins = 30, alpha = 0.6, position = "identity") +
+                facet_wrap(~species, scales = "free_y") +
+                labs(title = paste("Distribution of", variable_name, "by Species"),
+                     x = variable_name,
+                     y = "Frequency") +
+                theme_minimal()
+}
+
+# Example usage:
+# Plot the distribution of 'body_mass_g' for each penguin species
+# plot_species_distribution(palmerpenguins::penguins, "body_mass_g")
+```
+
+
+## Next steps
+
+Use the provided dataset [here](my_penguins.csv) and at least one of these functions to build your own mini-package.
+
+Remember that to provide meaningful documentation for your functions, which should include:
+
+- a description of the function,
+- the input parameters,
+- the output,
+- and an example of usage.

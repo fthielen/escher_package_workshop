@@ -1,0 +1,184 @@
+---
+title: "👋 Welcome to EsCHER's R-evolution"
+subtitle: "Mastering R Package Development for Health Economics workshop"
+author: "Eline Krijkamp & Frederick Thielen"
+footer: "EsCHER's R-evolution"
+date: "04-23-2024"
+format: revealjs
+editor_options: 
+  chunk_output_type: console
+---
+
+## About EsCHER
+
+Erasmus Centre for Health Economics Rotterdam (EsCHER) is:
+
+- part of Erasmus University Rotterdam
+- consolidates unique and leading expertise in health economics
+- with over 100 health economists and health economic researchers
+
+## About us
+### Eline Krijkamp
+
+
+## About us
+### Frederick Thielen
+
+- 2021 - now: Assistant professor <span style="color:purple;">@ESHPM</span> 🎓
+- 2023 - now: Senior researcher <span style="color:red;">@Trimbos</span> 💻
+- 2015 - 2020: PhD student <span style="color:purple;">@ESHPM</span> 🎓
+- 2013 - 2015: MSc (res) Health Sciences <span style="color:darkblue;">@Maastricht University</span> 🎓
+- 2010 - 2013: BSc European Public Health <span style="color:darkblue;">@Maastricht University</span> 🎓
+- 2009 - 2009: Nurse <span style="color:green;">@University Medical Center Aachen</span> 🩺
+
+## Why are we here today?
+
+::: {.columns}
+::: {.column width="50%"}
+### Eline
+
+
+:::
+::: {.column width="50%"}
+### Frederick
+- Using R daily
+- No formal data science education and mostly self-taught
+- Want to learn new advanced R-skills
+:::
+:::
+
+## Why are *you* here today? 🫵
+### Introduce yourself on paper
+
+::: {.columns}
+::: {.column width="80%"}
+
+1. On a post-it, write down:
+
+    - Your name
+    - Your background & current occupation
+    - One hobby
+    - What you hope to get out of this course
+
+2. Give the post-it to the person next to you
+
+:::
+
+::: {.column width="20%"}
+
+![](https://c.pxhere.com/photos/7b/e9/post_it_postit_sticky_notes_adhesive_note_note_list-1390248.jpg!d)
+
+:::
+:::
+
+## Why are *they* here today? 👉
+### Mix and gossip positively
+::: {.columns}
+::: {.column width="70%"}
+
+
+
+3. 📣 Introduce the person next to you to someone else and 🔄 exchange the post-it
+
+<br>
+
+(4. 📣 Introduce the person to the group)
+
+
+:::
+
+::: {.column width="30%"}
+
+![](images/game1.png)
+
+:::
+:::
+
+
+## 🛜 Course content
+
+Get all course content on **bit.ly/escher-package**
+
+<br>
+
+### Need internet?
+
+- SMS `eur96` to telephone number 06-35250006.
+- You will receive a login name and password for the entire day by SMS.
+
+## ☀️ Our day
+::: {style="font-size: 65%;"}
+
+| Time          | Title      | Location                |
+|-----------------|----------------------------|----------------------------|
+| 09:30 - 10:00 | **☕️ Arrival & Coffee**  | Open space on the 7^th^ floor           |
+| 10:00 - 10:30 | **👋 Welcome & Introduction**      |  J7-55           |
+| 10:30 - 11:45 | **🎤 Keynote by [Gianluca Baio](https://www.linkedin.com/in/gianluca-baio-b893879/?originalSubdomain=uk)** |  J7-55           |
+| 11:45 - 12:30 | **🥗 Lunch** |  Open space on the 7^th^ floor           |
+| 12:30 - 14:45 | **💻 Coding exercise: build your own package** |  J7-43, J7-45, J7-47       |
+| 14:45 - 16:00 | **🧊 Drinks** |  Open space on the 7^th^ floor           |
+:::
+
+::: {style="text-align: center;"}
+
+#  🎤 Keynote by Gianluca
+:::
+
+::: {style="text-align: center;"}
+
+# 🥗 Lunch
+:::
+
+::: {style="text-align: center;"}
+# 💻 Coding exercise: build your own package
+:::
+
+## Step-by-step guide
+
+1. 💻 Create a new package with your group <br> (12:30 - 13:30)
+
+::: {.incremental}
+
+2. 📣 Make your package publicly available through GitHub <br> (13:30 - 14:00)
+
+3. ⬇️ Download & install a package from another group to test it <br> (14:00 - 14:30)
+
+4. 📝 Write a short review on the package you tested <br> (14:30 - 14:45)
+:::
+
+## Part 1
+
+### 12:30 - 13:30 
+
+Create a new package with your group:
+
+- decide on a package name
+- select or write at least one dataset and one function you want to include
+- make sure to document everything properly
+
+## Part 2
+### 13:30 - 14:00
+Share your package with the world:
+
+- upload your package to GitHub
+- make sure to include a README file
+
+## Part 3
+### 14:00 - 14:30
+Download and install a package from another group:
+
+- test the package
+- does the documentation make sense?
+
+## Part 4
+### 14:30 - 14:45
+Write a short review on the package you tested:
+
+- what did you like?
+- what could be improved?
+
+::: {style="text-align: center;"}
+
+# 🤔 Questions
+
+:::
