@@ -8,7 +8,7 @@
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Eline Krijkamp &amp; Frederick Thielen">
   <meta name="dcterms.date" content="2024-04-23">
@@ -157,7 +157,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -551,23 +552,52 @@ Eline Krijkamp &amp; Frederick Thielen
 <li>what did you like?</li>
 <li>what could be improved?</li>
 </ul>
-<div style="text-align: center;">
+</section>
+<section id="closing" class="title-slide slide level1 center" style="text-align: center;">
+<h1>🏁 Closing</h1>
 
+</section>
+
+<section id="outlook" class="slide level2">
+<h2>Outlook</h2>
+<p>This one-day workshop gave jsut a brief introduction to the world of R and package development. <br> <br></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>There is much more out there, especially for HTA researchers!</p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/publication_package.png"></p>
+</div>
 </div>
 </section>
-<section id="closing" class="title-slide slide level1 center">
-<h1>Closing</h1>
-<p>This one-day workshop gave a brief introduction to the world of R and package development. More reading, specific for HTA <img data-src="images/publication_package.png"> ::: ## Larger R community - [R for HTA]<a href="https://r-hta.org" class="uri">https://r-hta.org</a> and its yearly conference! [] - [DARTH workgroup]<a href="http://darthworkgroup.com" class="uri">http://darthworkgroup.com</a> - [Dark peak analytics]<a href="https://darkpeakanalytics.com" class="uri">https://darkpeakanalytics.com</a></p>
-<p>:::</p>
-</section>
+<section id="be-part-of-a-larger-r-community" class="slide level2">
+<h2>Be part of a larger R community</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p><a href="https://r-hta.org">R for HTA</a> and its yearly conference!</p></li>
+<li><p><a href="http://darthworkgroup.com">DARTH workgroup</a></p></li>
+<li><p><a href="https://darkpeakanalytics.com">Dark peak analytics</a></p></li>
+<li><p>Many books about R</p></li>
+<li><p>ESHPM R journal club</p></li>
+</ul>
+</div><div class="column" style="width:10%;">
 
-<section id="questions" class="title-slide slide level1 center">
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/community.png" style="width:100.0%"></p>
+</div>
+</div>
+</section>
+<section id="questions" class="title-slide slide level1 center" style="text-align: center;">
 <h1>🤔 Questions</h1>
 
+</section>
+
+
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>EsCHER’s R-evolution</p>
 </div>
-</section>
+</div>
     </div>
   </div>
 
@@ -594,7 +624,6 @@ Eline Krijkamp &amp; Frederick Thielen
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -745,7 +774,7 @@ Eline Krijkamp &amp; Frederick Thielen
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1150,
 
         height: 700,
 
@@ -855,10 +884,9 @@ Eline Krijkamp &amp; Frederick Thielen
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -868,8 +896,17 @@ Eline Krijkamp &amp; Frederick Thielen
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
