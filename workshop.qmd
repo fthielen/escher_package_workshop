@@ -131,6 +131,8 @@ The example in the template looks comparable to this.
 
 ![](images/description_lines.png) As you see, there are many placeholder with general text. Please update this according, especially the title, authors, description.
 
+You might also like to add a license. More about licensing can be found [here]<https://choosealicense.com> and more flavors are [here] <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository>
+
 At this state, we could call the current code a package. We could load it using the code below after first making sure we activated `devtools`.
 
 ```{r}
@@ -265,6 +267,17 @@ Now that we have the key functions and documentation, we can upload this to GitH
 ### Share you package via GitHub.
 
 Note that putting the R package on GitHub is not a requirement, but it is probably the easiest way to share your work if you have experience with GitHub.
+
+#### Install a package from R
+
+To install a package from GitHub you need to know the GitHub directory. For example, the GitHub package we created as an example for this workshop: `krijkamp/my_R_package_EsCHER_event_example`. You can install this via the following code.
+
+```{r, eval = FALSE}
+# Install development version from GitHub
+#devtools::install_github("REPO NAME")
+devtools::install_github("krijkamp/my_R_package_EsCHER_event_example")
+
+```
 
 ### Share you package as source package
 

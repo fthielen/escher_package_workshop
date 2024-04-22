@@ -355,6 +355,7 @@ Extra information
 <p><img src="images/description.png" class="img-fluid"> As you see in the image, this file is in the main directory. It is a plain text document without any file extension and will contain metadata about the R package.</p>
 <p>The example in the template looks comparable to this.</p>
 <p><img src="images/description_lines.png" class="img-fluid"> As you see, there are many placeholder with general text. Please update this according, especially the title, authors, description.</p>
+<p>You might also like to add a license. More about licensing can be found [here]<a href="https://choosealicense.com" class="uri">https://choosealicense.com</a> and more flavors are [here] <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" class="uri">https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository</a></p>
 <p>At this state, we could call the current code a package. We could load it using the code below after first making sure we activated <code>devtools</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span>
@@ -462,6 +463,15 @@ Extra information
 <section id="share-you-package-via-github." class="level3">
 <h3 class="anchored" data-anchor-id="share-you-package-via-github.">Share you package via GitHub.</h3>
 <p>Note that putting the R package on GitHub is not a requirement, but it is probably the easiest way to share your work if you have experience with GitHub.</p>
+<section id="install-a-package-from-r" class="level4">
+<h4 class="anchored" data-anchor-id="install-a-package-from-r">Install a package from R</h4>
+<p>To install a package from GitHub you need to know the GitHub directory. For example, the GitHub package we created as an example for this workshop: <code>krijkamp/my_R_package_EsCHER_event_example</code>. You can install this via the following code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install development version from GitHub</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#devtools::install_github("REPO NAME")</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"krijkamp/my_R_package_EsCHER_event_example"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </section>
 <section id="share-you-package-as-source-package" class="level3">
 <h3 class="anchored" data-anchor-id="share-you-package-as-source-package">Share you package as source package</h3>
