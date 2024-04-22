@@ -192,6 +192,25 @@ Write a short review on the package you tested:
 
 ::: {style="text-align: center;"}
 
-# 🤔 Questions
+:::
+
+# Closing
+This one-day workshop gave a brief introduction to the world of R and package development.
+More reading, specific for HTA
+![](images/publication_package.png)
+:::
+## Larger R community
+- [R for HTA]<https://r-hta.org> and its yearly conference! []
+- [DARTH workgroup]<http://darthworkgroup.com>
+- [Dark peak analytics]<https://darkpeakanalytics.com>
+
+- Many books about R
+- ESHPM R journal club
+
 
 :::
+
+
+# 🤔 Questions
+
+
