@@ -358,44 +358,28 @@
     "href": "presentation.html#about-escher",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "About EsCHER",
-    "text": "About EsCHER\nErasmus Centre for Health Economics Rotterdam (EsCHER) is:\n\npart of Erasmus University Rotterdam\nconsolidates unique and leading expertise in health economics\nwith over 100 health economists and health economic researchers",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "About EsCHER\nErasmus Centre for Health Economics Rotterdam (EsCHER) is:\n\npart of Erasmus University Rotterdam\nconsolidates unique and leading expertise in health economics\nwith over 100 health economists and health economic researchers\n\nWe thank EsCHER for the funding of this day."
   },
   {
     "objectID": "presentation.html#about-us",
     "href": "presentation.html#about-us",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "About us",
-    "text": "About us\nEline Krijkamp",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "About us\nEline Krijkamp\n\n2022 - now: Postdoc researcher @ESHPM 💻\n2018 - 2022: PhD student @Erasmus Medical Center 🎓\n2017 - 2020: Educational innovation team @NIHES 📚🏫\n2014 - 2016: MSc (res) Health Sciences @NIHES 🎓\n2013 - 2015: MSc Health Economics Policy and Law @ESHPM \n2010 - 2013: BSc Health Sciences and Biomedical Sciences @VU University Amsterdam  🎓"
   },
   {
     "objectID": "presentation.html#about-us-1",
     "href": "presentation.html#about-us-1",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "About us",
-    "text": "About us\nFrederick Thielen\n\n2021 - now: Assistant professor @ESHPM 🎓\n2023 - now: Senior researcher @Trimbos 💻\n2015 - 2020: PhD student @ESHPM 🎓\n2013 - 2015: MSc (res) Health Sciences @Maastricht University 🎓\n2010 - 2013: BSc European Public Health @Maastricht University 🎓\n2009 - 2009: Nurse @University Medical Center Aachen 🩺",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "About us\nFrederick Thielen\n\n2021 - now: Assistant professor @ESHPM 🎓\n2023 - now: Senior researcher @Trimbos 💻\n2015 - 2020: PhD student @ESHPM 🎓\n2013 - 2015: MSc (res) Health Sciences @Maastricht University 🎓\n2010 - 2013: BSc European Public Health @Maastricht University 🎓\n2009 - 2009: Nurse @University Medical Center Aachen 🩺"
   },
   {
     "objectID": "presentation.html#why-are-we-here-today",
     "href": "presentation.html#why-are-we-here-today",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Why are we here today?",
-    "text": "Why are we here today?\n\n\nEline\n\nFrederick\n\nUsing R daily\nNo formal data science education and mostly self-taught\nWant to learn new advanced R-skills",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Why are we here today?\n\n\nEline\n\nMiss working with R a lot\nAmbition to integrate R more on the ESHPM department\nKeep up with the newest R features\nInspire others to work with R\n\n\nFrederick\n\nUsing R daily\nNo formal data science education and mostly self-taught\nWant to learn new advanced R-skills"
   },
   {
     "objectID": "presentation.html#eline",
@@ -409,77 +393,49 @@
     "href": "presentation.html#our-day",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "☀️ Our day",
-    "text": "☀️ Our day\n\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Coffee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 16:00\n🧊 Drinks\nOpen space on the 7th floor",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "☀️ Our day\n\n\n\n\nTime\nTitle\nLocation\n\n\n\n\n09:30 - 10:00\n☕️ Arrival & Coffee\nOpen space on the 7th floor\n\n\n10:00 - 10:30\n👋 Welcome & Introduction\nJ7-55\n\n\n10:30 - 11:45\n🎤 Keynote by Gianluca Baio\nJ7-55\n\n\n11:45 - 12:30\n🥗 Lunch\nOpen space on the 7th floor\n\n\n12:30 - 14:45\n💻 Coding exercise: build your own package\nJ7-43, J7-45, J7-47\n\n\n14:45 - 16:00\n🧊 Drinks\nOpen space on the 7th floor"
   },
   {
     "objectID": "presentation.html#step-by-step-guide",
     "href": "presentation.html#step-by-step-guide",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Step-by-step guide",
-    "text": "Step-by-step guide\n\n💻 Create a new package with your group  (12:30 - 13:30)\n\n\n\n📣 Make your package publicly available through GitHub  (13:30 - 14:00)\n⬇️ Download & install a package from another group to test it  (14:00 - 14:30)\n📝 Write a short review on the package you tested  (14:30 - 14:45)",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Step-by-step guide\n\n💻 Create a new package with your group  (12:30 - 13:30)\n\n\n\n📣 Make your package publicly available through GitHub  (13:30 - 14:00)\n⬇️ Download & install a package from another group to test it  (14:00 - 14:30)\n📝 Write a short review on the package you tested  (14:30 - 14:45)"
   },
   {
     "objectID": "presentation.html#part-1",
     "href": "presentation.html#part-1",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Part 1",
-    "text": "Part 1\n12:30 - 13:30\nCreate a new package with your group:\n\ndecide on a package name\nselect or write at least one dataset and one function you want to include\nmake sure to document everything properly",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Part 1\n12:30 - 13:30\nCreate a new package with your group:\n\ndecide on a package name\nselect or write at least one dataset and one function you want to include\nmake sure to document everything properly"
   },
   {
     "objectID": "presentation.html#part-2",
     "href": "presentation.html#part-2",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Part 2",
-    "text": "Part 2\n13:30 - 14:00\nShare your package with the world:\n\nupload your package to GitHub\nmake sure to include a README file",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Part 2\n13:30 - 14:00\nShare your package with the world:\n\nupload your package to GitHub\nadd the GitHub link to the overview on OneDrive\nmake sure to include a README file\n\nIf you don’t use GitHub, you can save your package in the OneDrive folder"
   },
   {
     "objectID": "presentation.html#part-3",
     "href": "presentation.html#part-3",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Part 3",
-    "text": "Part 3\n14:00 - 14:30\nDownload and install a package from another group:\n\ntest the package\ndoes the documentation make sense?",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Part 3\n14:00 - 14:30\nDownload and install a package from another group: see schedulde in OneDrive\n\ntest the package\ndoes the documentation make sense?"
   },
   {
     "objectID": "presentation.html#part-4",
     "href": "presentation.html#part-4",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Part 4",
-    "text": "Part 4\n14:30 - 14:45\nWrite a short review on the package you tested:\n\nwhat did you like?\nwhat could be improved?",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Part 4\n14:30 - 14:45\nWrite a short review on the package you tested:\n\nwhat did you like?\nwhat could be improved?"
   },
   {
     "objectID": "presentation.html#course-content",
     "href": "presentation.html#course-content",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "🛜 Course content",
-    "text": "🛜 Course content\nGet all course content on bit.ly/escher-package\n\nNeed internet?\n\nSMS eur96 to telephone number 06-35250006.\nYou will receive a login name and password for the entire day by SMS.",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "🛜 Course content\nGet all course content on bit.ly/escher-package\n\nNeed internet?\n\nSMS eur96 to telephone number 06-35250006.\nYou will receive a login name and password for the entire day by SMS."
   },
   {
     "objectID": "presentation.html#need-internet",
@@ -493,21 +449,13 @@
     "href": "presentation.html#why-are-you-here-today",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Why are you here today? 🫵",
-    "text": "Why are you here today? 🫵\nIntroduce yourself on paper\n\n\n\nOn a post-it, write down:\n\nYour name\nYour background & current occupation\nOne hobby\nWhat you hope to get out of this course\n\nGive the post-it to the person next to you",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Why are you here today? 🫵\nIntroduce yourself on paper\n\n\n\nOn a post-it, write down:\n\nYour name\nYour background & current occupation\nOne hobby\nWhat you hope to get out of this course\n\nGive the post-it to the person next to you"
   },
   {
     "objectID": "presentation.html#why-are-they-here-today",
     "href": "presentation.html#why-are-they-here-today",
     "title": "👋 Welcome to EsCHER’s R-evolution",
     "section": "Why are they here today? 👉",
-    "text": "Why are they here today? 👉\nMix and gossip positively\n\n\n\n📣 Introduce the person next to you to someone else and 🔄 exchange the post-it\n\n\n(4. 📣 Introduce the person to the group)",
-    "crumbs": [
-      "Coding exercises",
-      "Presentation"
-    ]
+    "text": "Why are they here today? 👉\nMix and gossip positively\n\n\n\n📣 Introduce the person next to you to someone else and 🔄 exchange the post-it\n\n\n(4. 📣 Introduce the person to the group)"
   }
 ]

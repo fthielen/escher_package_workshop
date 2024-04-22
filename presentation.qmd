@@ -17,9 +17,16 @@ Erasmus Centre for Health Economics Rotterdam (EsCHER) is:
 - consolidates unique and leading expertise in health economics
 - with over 100 health economists and health economic researchers
 
+We thank EsCHER for the funding of this day.
+
 ## About us
 ### Eline Krijkamp
-
+- 2022 - now:  Postdoc researcher <span style="color:purple;">@ESHPM</span> 💻
+- 2018 - 2022: PhD student <span style="color:darkblue;">@Erasmus Medical Center</span> 🎓
+- 2017 - 2020: Educational innovation team <span style="color:green;">@NIHES</span> 📚🏫
+- 2014 - 2016: MSc (res) Health Sciences <span style="color:green;">@NIHES</span> 🎓
+- 2013 - 2015: MSc Health Economics Policy and Law <span style="color:purple;">@ESHPM </span>
+- 2010 - 2013: BSc Health Sciences and Biomedical Sciences <span style="color:lightblue;">@VU University Amsterdam </span> 🎓
 
 ## About us
 ### Frederick Thielen
@@ -36,7 +43,10 @@ Erasmus Centre for Health Economics Rotterdam (EsCHER) is:
 ::: {.columns}
 ::: {.column width="50%"}
 ### Eline
-
+- Miss working with R a lot 
+- Ambition to integrate R more on the ESHPM department 
+- Keep up with the newest R features 
+- Inspire others to work with R
 
 :::
 ::: {.column width="50%"}
@@ -160,12 +170,15 @@ Create a new package with your group:
 ### 13:30 - 14:00
 Share your package with the world:
 
-- upload your package to GitHub
+- upload your package to GitHub 
+- add the GitHub link to the overview on OneDrive 
 - make sure to include a README file
+
+If you don't use GitHub, you can save your package in the OneDrive folder
 
 ## Part 3
 ### 14:00 - 14:30
-Download and install a package from another group:
+Download and install a package from another group: see schedulde in OneDrive
 
 - test the package
 - does the documentation make sense?
