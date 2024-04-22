@@ -4,7 +4,10 @@ subtitle: "Mastering R Package Development for Health Economics workshop"
 author: "Eline Krijkamp & Frederick Thielen"
 footer: "EsCHER's R-evolution"
 date: "04-23-2024"
-format: revealjs
+format:
+   revealjs:
+    width: 1150
+    margin: 0.1
 editor_options: 
   chunk_output_type: console
 ---
@@ -192,25 +195,55 @@ Write a short review on the package you tested:
 
 ::: {style="text-align: center;"}
 
+# 🏁 Closing
+
 :::
 
-# Closing
-This one-day workshop gave a brief introduction to the world of R and package development.
-More reading, specific for HTA
+## Outlook
+
+This one-day workshop gave jsut a brief introduction to the world of R and package development.
+<br>
+<br>
+
+::: {.columns}
+::: {.column width="40%"}
+
+
+There is much more out there, especially for HTA researchers!
+:::
+
+::: {.column width="60%"}
+
 ![](images/publication_package.png)
 :::
-## Larger R community
-- [R for HTA]<https://r-hta.org> and its yearly conference! []
-- [DARTH workgroup]<http://darthworkgroup.com>
-- [Dark peak analytics]<https://darkpeakanalytics.com>
+:::
+
+## Be part of a larger R community
+
+
+::: {.columns}
+::: {.column width="40%"}
+
+- [R for HTA](https://r-hta.org) and its yearly conference!
+- [DARTH workgroup](http://darthworkgroup.com)
+- [Dark peak analytics](https://darkpeakanalytics.com)
 
 - Many books about R
 - ESHPM R journal club
 
-
 :::
 
+::: {.column width="10%"}
+:::
 
+::: {.column width="50%"}
+
+![](images/community.png){width=100%}
+
+:::
+:::
+
+::: {style="text-align: center;"}
 # 🤔 Questions
-
+:::
 
