@@ -20,20 +20,26 @@ The saying is true, and especially with coding. However, the aim of developing a
 
 To get started with an R packages including documentation, it is best to create a new R project. To do this first open Rstudio. In Rstudio, go to `File > New Project...`; the box below should show up.
 
-## ![](images/new_project.png)
+![](images/new_project.png)
+
+---
 
 Select the option `New Directory`. The following box should appear.
 
-## ![](images/new_project_pop_up.png)
+![](images/new_project_pop_up.png)
+
+---
 
 Select the option `R Package`
 
-![](images/new_project_select_R_package.png)
+![](images/new_project_select_R_package.png){width=50%}
 
 ---
+
 The following box should appear.
 
-![](images/new_project_wizard.png)
+
+![](images/new_project_wizard.png){width=50%}
 ---
 
 Now give your package a name. This should be one word. In this example, I use `eschereventpackage`.
@@ -76,27 +82,27 @@ In this workshop we guide you through the steps of a very basic R package. After
 
 The R package template you created already came with a basis function. The `hello` function, which prints `Hello, world!`. This function, an `.r` script, lives in the `R` folder.
 
-![](images/R_folder_created.png)
+![](images/R_folder_created.png){width=50%}
 
 Click on this R folder and you will see the `hello.R` script. We will ignore this script for now.
 
-![](images/R_folder.png)
+![](images/R_folder.png){width=50%}
 
 Instead, we will create our own functions. The first function is to convert temperatures from degrees Fahrenheit to degrees Celsius, while the second function will convert temperatures from degrees Celsius to degrees Fahrenheit. To do so, we have to add an R script. You can click `File > New File > R script`.
 
-![](images/open_r_script.png)
+![](images/open_r_script.png){width=80%}
 
 A file called `Untitled1` opens. Click on the save button and give the R script a name.
 
-## ![](images/save_r_script.png)
+![](images/save_r_script.png){width=50%}
 
 Give your R script a name, select the `R` folder as the location for the file and click `Save`. This `R` folder is the folder where you will store actual R scripts with the coded functions.
 
-## ![](images/name_r_script.png)
+![](images/name_r_script.png)
 
 In your R repository environment you should now see the file within the R folder.
 
-![](images/script_in_R_folder.png)
+![](images/script_in_R_folder.png){width=70%}
 
 Within this folder you can save as many R scripts, `.R` files, as you like. And each of these `.R`. files can have as any functions you want. You could, for example, give each function its own file, but for large projects, you might like to group similar functions in the same `.R` file.
 
@@ -125,13 +131,17 @@ Overall, all these guides aim to facilitate the sharing and readability of code.
 
 Next, we will focus on the DESCRIPTION file that came with the template.
 
-![](images/description.png) As you see in the image, this file is in the main directory. It is a plain text document without any file extension and will contain metadata about the R package.
+![](images/description.png){width=50%}
+
+As you see in the image, this file is in the main directory. It is a plain text document without any file extension and will contain metadata about the R package.
 
 The example in the template looks comparable to this.
 
-![](images/description_lines.png) As you see, there are many placeholder with general text. Please update this according, especially the title, authors, description.
+![](images/description_lines.png){width=50%}
 
-You might also like to add a license. More about licensing can be found [here]<https://choosealicense.com> and more flavors are [here] <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository>
+As you see, there are many placeholder with general text. Please update this according, especially the title, authors, description.
+
+You might also like to add a license. More about licensing can be found [here](https://choosealicense.com> and more flavors are [here] <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
 At this state, we could call the current code a package. We could load it using the code below after first making sure we activated `devtools`.
 
@@ -221,9 +231,9 @@ roxygenise()      # Builds the help files
 
 `roxygenise` is the workhorse function that uses `roclets`, the built-in document transformation functions, to build all documentation for a package. For more information, you can read the documentation in the `roxygen2` package.
 
-Note that there are two more things in the directory. The first is a folder called `man`, which holds the help files that we have written. The second is a plain text file `NAMESPACE`, which works with R to integrate them into the package correctly; you do not need to edit `NAMESPACE` manually, in fact, the file itself tells you not to edit it. ![](images/man_folder_location.png)
+Note that there are two more things in the directory. The first is a folder called `man`, which holds the help files that we have written. The second is a plain text file `NAMESPACE`, which works with R to integrate them into the package correctly; you do not need to edit `NAMESPACE` manually, in fact, the file itself tells you not to edit it. ![](images/man_folder_location.png){width=50%}
 
-Inside the `man` folder, there are now new markdown documents, one for each function you add. ![](images/man_folder.png)
+Inside the `man` folder, there are now new markdown documents, one for each function you add. ![](images/man_folder.png){width=50%}
 
 Both are plain text files. Here are the contents of `convert_Celsius_to_Fahrenheid.Rd`.
 
@@ -258,7 +268,9 @@ We can now see if it works and ask for help with the `convert_Celsius_to_Fahrenh
 ?convert_Celsius_to_Fahrenheid
 ```
 
-Rstudio will present the following in the Help tab. ![](images/help_file_function.png)
+Rstudio will present the following in the Help tab.
+
+![](images/help_file_function.png)
 
 Now that we have the key functions and documentation, we can upload this to GitHub for the world to see and use.
 
@@ -285,7 +297,9 @@ You can also build a source package (i.e., a zipped version of the R package) in
 
 #### Install a source package
 
-You can install a source package via `Tools > Install Packages`, the following window will appear. ![](images/install_source_package.png)
+You can install a source package via `Tools > Install Packages`, the following window will appear. 
+
+![](images/install_source_package.png){width=50%}
 
 Select Package Archive and browse to the file. Next click `Install`.
 
