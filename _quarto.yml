@@ -23,6 +23,16 @@ website:
         text: Timetable
       - href: preclass.qmd
         text: Pre-class
+      - section: "In-class"
+        contents:
+          - href: presentation.qmd
+            text: Presentation
+          - href: workshop.qmd
+            text: Workshop
+          - href: course_material/starwars/starwars_example.qmd
+            text: Star Wars example
+          - href: course_material/penguins/penguins_example.qmd
+            text: Penguin example
           
 format:
   html:
