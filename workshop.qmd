@@ -231,7 +231,9 @@ roxygenise()      # Builds the help files
 
 `roxygenise` is the workhorse function that uses `roclets`, the built-in document transformation functions, to build all documentation for a package. For more information, you can read the documentation in the `roxygen2` package.
 
-Note that there are two more things in the directory. The first is a folder called `man`, which holds the help files that we have written. The second is a plain text file `NAMESPACE`, which works with R to integrate them into the package correctly; you do not need to edit `NAMESPACE` manually, in fact, the file itself tells you not to edit it. ![](images/man_folder_location.png){width=50%}
+Note that there are two more things in the directory. The first is a folder called `man`, which holds the help files that we have written. The second is a plain text file `NAMESPACE`, which works with R to integrate them into the package correctly; you do not need to edit `NAMESPACE` manually, in fact, the file itself tells you not to edit it.
+
+![](images/man_folder_location.png){width=50%}
 
 Inside the `man` folder, there are now new markdown documents, one for each function you add. ![](images/man_folder.png){width=50%}
 
@@ -309,13 +311,13 @@ You now have the basis knowledge to develop and share a package. Ready to develo
 
 ## Peer review
 
-Peer review is crucial for R packages because it ensures the quality and reliability of the code by having experts scrutinize the functionality and design before public release. This process helps identify and rectify errors, improve code efficiency, and enhance usability, which might otherwise be missed by the programmers. Peer review can also be useful to get feedback on coding standards and best practices and to robustness and maintainability of the package. While CRAN always requires this rigorous review process, it is also highly recommended to let your code be reviewed when hosted on GitHub. Therefore, we like you to practice this with our group and give and provide some feedback.
+Peer review is crucial for R packages as it ensures the quality and reliability of the code. This process involves experts scrutinizing the functionality and design before public release, helping to identify and rectify errors, improve code efficiency, and enhance usability—issues that might otherwise be overlooked by the programmers. Peer review also provides valuable feedback on coding standards and best practices, and contributes to the robustness and maintainability of the package. While CRAN requires this rigorous review process, it is also highly recommended for code hosted on GitHub. Therefore, we encourage you to practice this with our group and to both give and receive feedback.
 
 ### Share your work for peer review
+If you have published your package on GitHub, you can share the link with another group to review the package. Please make sure your GitHub repository is public. Otherwise, you can upload your compressed file to the shared Sharepoint folder: [EsCHER R workshop April 2023](https://liveeur-my.sharepoint.com/:f:/r/personal/85719ekr_eur_nl/Documents/EsCHER%20R%20workshop%20April%202023?csf=1&web=1&e=hDQllq)).
 
-If you have published your package on GitHub, you can share the link with an other group to review the package. Please make sure you GitHub repository is public. Otherwise, you can upload your compressed file to the shared OneDrive folder: [EsCHER R workshop April 2023](https://liveeur-my.sharepoint.com/:f:/r/personal/85719ekr_eur_nl/Documents/EsCHER%20R%20workshop%20April%202023?csf=1&web=1&e=hDQllq)).
+In this folder, we also have an overview with suggested combinations for peer review. Please install the package of the other, test it, and provide some feedback.
 
-In this folder, we also have an overview with suggested combination for peer review. Please install the package of the other, test it and provide some feedback.
 
 #### Acknowledgement
 
