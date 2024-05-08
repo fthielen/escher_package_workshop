@@ -116,7 +116,7 @@ Get all course content on **bit.ly/escher-package**
 
 ### Need internet?
 
-- SMS `eur96` to telephone number 06-35250006.
+- SMS `97eur` to telephone number 06-35250006.
 - You will receive a login name and password for the entire day by SMS.
 
 ## ☀️ Our day
@@ -136,6 +136,11 @@ Get all course content on **bit.ly/escher-package**
 
 #  🎤 Keynote by Gianluca
 :::
+
+## Link
+
+[Presentation](https://giabaio.github.io/erasmus)
+
 
 ::: {style="text-align: center;"}
 
